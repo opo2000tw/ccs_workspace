@@ -1,0 +1,65 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "C:/ti/xdctools_3_50_08_24_core/packages",
+                "C:/ti/ti-cgt-c6000_8.3.3/include",
+                "C:/ti/bios_6_73_01_01/packages",
+                "C:/ti/mmwave_sdk_03_05_00_04/packages",
+                "${workspaceFolder}/mrr_18xx_dss/src"
+            ],
+            "defines": [
+                "SOC_XWR68XX",
+                "SUBSYS_MSS",
+                "_LITTLE_ENDIAN",
+                "MMWAVE_SHMEM_TCMA_NUM_BANK=0",
+                "MMWAVE_SHMEM_TCMB_NUM_BANK=0",
+                "MMWAVE_SHMEM_BANK_SIZE=0x20000",
+                "MMWAVE_L3RAM_NUM_BANK=8",
+                "SHMEM_ALLOC=0x00000008",
+                "DOWNLOAD_FROM_CCS",
+                "DebugP_ASSERT_ENABLED",
+                "",
+                "SOC_XWR68XX",
+                "SUBSYS_DSS",
+                "ENABLE_ADVANCED_FRAME",
+                "MMWAVE_SHMEM_BANK_SIZE=0x20000",
+                "MMWAVE_L3RAM_NUM_BANK=8",
+                "MMWAVE_L3RAM_SIZE=0x100000",
+                "SHMEM_ALLOC=0x00000008",
+                "DOWNLOAD_FROM_CCS",
+                "DebugP_ASSERT_ENABLED"
+            ],
+            "cStandard": "gnu99",
+            "cppStandard": "gnu++11",
+            "intelliSenseMode": "windows-msvc-x64"
+        }
+    ],
+    "version": 4
+}
+// "_DEBUG",
+// "UNICODE",
+// "_UNICODE",
+//dss
+// "SOC_XWR68XX",
+// "SUBSYS_DSS",
+// "ENABLE_ADVANCED_FRAME",
+// "MMWAVE_L3RAM_NUM_BANK=8",
+// "MMWAVE_SHMEM_BANK_SIZE=0x20000",
+// "MMWAVE_L3RAM_SIZE=0x100000",
+// "SHMEM_ALLOC=0x00000008",
+// "DOWNLOAD_FROM_CCS",
+// "DebugP_ASSERT_ENABLED",
+//mss
+// _LITTLE_ENDIAN
+// MMWAVE_L3RAM_NUM_BANK=8
+// MMWAVE_SHMEM_TCMA_NUM_BANK=0
+// MMWAVE_SHMEM_TCMB_NUM_BANK=0
+// MMWAVE_SHMEM_BANK_SIZE=0x20000
+// SOC_XWR68XX
+// SUBSYS_MSS
+// DOWNLOAD_FROM_CCS
+// SHMEM_ALLOC=0x00000008
+// DebugP_ASSERT_ENABLED

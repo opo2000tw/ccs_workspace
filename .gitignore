@@ -10,7 +10,8 @@ Debug
 *.aer4f
 *.obj
 *.ae674
-
+gcc
+iar
 #################
 
 .metadata
