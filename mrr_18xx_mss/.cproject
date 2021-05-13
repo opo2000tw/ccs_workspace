@@ -62,7 +62,7 @@
 									<listOptionValue builtIn="false" value="MMWAVE_SHMEM_TCMB_NUM_BANK=0"/>
 									<listOptionValue builtIn="false" value="MMWAVE_SHMEM_BANK_SIZE=0x20000"/>
 									<listOptionValue builtIn="false" value="${BIOS_SYMBOLS}"/>
-									<listOptionValue builtIn="false" value="SOC_XWR18XX"/>
+									<listOptionValue builtIn="false" value="SOC_XWR68XX"/>
 									<listOptionValue builtIn="false" value="SUBSYS_MSS"/>
 									<listOptionValue builtIn="false" value="DOWNLOAD_FROM_CCS"/>
 									<listOptionValue builtIn="false" value="SHMEM_ALLOC=0x00000008"/>

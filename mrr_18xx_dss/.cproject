@@ -57,7 +57,7 @@
 									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_SYMBOLS}"/>
 									<listOptionValue builtIn="false" value="${COM_TI_MAS_DSPLIB_C64PX_SYMBOLS}"/>
 									<listOptionValue builtIn="false" value="${COM_TI_MATHLIB_C674X_SYMBOLS}"/>
-									<listOptionValue builtIn="false" value="SOC_XWR18XX"/>
+									<listOptionValue builtIn="false" value="SOC_XWR68XX"/>
 									<listOptionValue builtIn="false" value="SUBSYS_DSS"/>
 									<listOptionValue builtIn="false" value="ENABLE_ADVANCED_FRAME"/>
 									<listOptionValue builtIn="false" value="MMWAVE_L3RAM_NUM_BANK=8"/>
