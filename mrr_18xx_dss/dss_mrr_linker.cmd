@@ -38,9 +38,9 @@
 /*----------------------------------------------------------------------------*/
 /* Section Configuration                                                      */
 -ldsplib.ae64P
--llibmmwavealg_xwr18xx.ae674
+-llibmmwavealg_xwr68xx.ae674
 -lmathlib.ae674
--llibsoc_xwr18xx.ae674
+-llibsoc_xwr68xx.ae674
 SECTIONS
 {
     systemHeap : {} >> L2SRAM_UMAP0 | L2SRAM_UMAP1
@@ -72,7 +72,7 @@ SECTIONS
     .fastCode: 
     {
         dsplib.ae64P(.text)
-        libmmwavealg_xwr18xx.ae674(.text)
+        libmmwavealg_xwr68xx.ae674(.text)
         mathlib.ae674(.text)
         dss_data_path.oe674(.text:secondDimFFTandLog2Computation)
         dss_data_path.oe674(.text:MmwDemo_processChirp)
@@ -103,7 +103,7 @@ SECTIONS
        code that is required related to start/stop/reconfig processing */
     .overlay:
     {
-        libsoc_xwr18xx.ae674 (.text:SOC_init)
+        libsoc_xwr68xx.ae674 (.text:SOC_init)
         dss_main.oe674 (.text:main)
         dss_main.oe674 (.text:MmwDemo_populateMRR)
         dss_main.oe674 (.text:MmwDemo_populateUSRR)

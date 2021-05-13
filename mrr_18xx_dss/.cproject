@@ -112,18 +112,18 @@
 									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_LIBRARIES}"/>
 									<listOptionValue builtIn="false" value="${COM_TI_MAS_DSPLIB_C64PX_LIBRARIES}"/>
 									<listOptionValue builtIn="false" value="${COM_TI_MATHLIB_C674X_LIBRARIES}"/>
-									<listOptionValue builtIn="false" value="libosal_xwr18xx.ae674"/>
-									<listOptionValue builtIn="false" value="libsoc_xwr18xx.ae674"/>
-									<listOptionValue builtIn="false" value="libcrc_xwr18xx.ae674"/>
-									<listOptionValue builtIn="false" value="libuart_xwr18xx.ae674"/>
-									<listOptionValue builtIn="false" value="libmailbox_xwr18xx.ae674"/>
-									<listOptionValue builtIn="false" value="libmmwavelink_xwr18xx.ae674"/>
-									<listOptionValue builtIn="false" value="libmmwave_xwr18xx.ae674"/>
+									<listOptionValue builtIn="false" value="libosal_xwr68xx.ae674"/>
+									<listOptionValue builtIn="false" value="libsoc_xwr68xx.ae674"/>
+									<listOptionValue builtIn="false" value="libcrc_xwr68xx.ae674"/>
+									<listOptionValue builtIn="false" value="libuart_xwr68xx.ae674"/>
+									<listOptionValue builtIn="false" value="libmailbox_xwr68xx.ae674"/>
+									<listOptionValue builtIn="false" value="libmmwavelink_xwr68xx.ae674"/>
+									<listOptionValue builtIn="false" value="libmmwave_xwr68xx.ae674"/>
 									<listOptionValue builtIn="false" value="mathlib.ae674"/>
 									<listOptionValue builtIn="false" value="dsplib.ae64P"/>
-									<listOptionValue builtIn="false" value="libedma_xwr18xx.ae674"/>
-									<listOptionValue builtIn="false" value="libadcbuf_xwr18xx.ae674"/>
-									<listOptionValue builtIn="false" value="libmmwavealg_xwr18xx.ae674"/>
+									<listOptionValue builtIn="false" value="libedma_xwr68xx.ae674"/>
+									<listOptionValue builtIn="false" value="libadcbuf_xwr68xx.ae674"/>
+									<listOptionValue builtIn="false" value="libmmwavealg_xwr68xx.ae674"/>
 									<listOptionValue builtIn="false" value="rts6740_elf.lib"/>
 									<listOptionValue builtIn="false" value="libc.a"/>
 								</option>
@@ -265,18 +265,18 @@
 									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_LIBRARIES}"/>
 									<listOptionValue builtIn="false" value="${COM_TI_MAS_DSPLIB_C64PX_LIBRARIES}"/>
 									<listOptionValue builtIn="false" value="${COM_TI_MATHLIB_C674X_LIBRARIES}"/>
-									<listOptionValue builtIn="false" value="libosal_xwr18xx.ae674"/>
-									<listOptionValue builtIn="false" value="libsoc_xwr18xx.ae674"/>
-									<listOptionValue builtIn="false" value="libcrc_xwr18xx.ae674"/>
-									<listOptionValue builtIn="false" value="libuart_xwr18xx.ae674"/>
-									<listOptionValue builtIn="false" value="libmailbox_xwr18xx.ae674"/>
-									<listOptionValue builtIn="false" value="libmmwavelink_xwr18xx.ae674"/>
-									<listOptionValue builtIn="false" value="libmmwave_xwr18xx.ae674"/>
+									<listOptionValue builtIn="false" value="libosal_xwr68xx.ae674"/>
+									<listOptionValue builtIn="false" value="libsoc_xwr68xx.ae674"/>
+									<listOptionValue builtIn="false" value="libcrc_xwr68xx.ae674"/>
+									<listOptionValue builtIn="false" value="libuart_xwr68xx.ae674"/>
+									<listOptionValue builtIn="false" value="libmailbox_xwr68xx.ae674"/>
+									<listOptionValue builtIn="false" value="libmmwavelink_xwr68xx.ae674"/>
+									<listOptionValue builtIn="false" value="libmmwave_xwr68xx.ae674"/>
 									<listOptionValue builtIn="false" value="mathlib.ae674"/>
 									<listOptionValue builtIn="false" value="dsplib.ae64P"/>
-									<listOptionValue builtIn="false" value="libedma_xwr18xx.ae674"/>
-									<listOptionValue builtIn="false" value="libadcbuf_xwr18xx.ae674"/>
-									<listOptionValue builtIn="false" value="libmmwavealg_xwr18xx.ae674"/>
+									<listOptionValue builtIn="false" value="libedma_xwr68xx.ae674"/>
+									<listOptionValue builtIn="false" value="libadcbuf_xwr68xx.ae674"/>
+									<listOptionValue builtIn="false" value="libmmwavealg_xwr68xx.ae674"/>
 									<listOptionValue builtIn="false" value="rts6740_elf.lib"/>
 									<listOptionValue builtIn="false" value="libc.a"/>
 								</option>
