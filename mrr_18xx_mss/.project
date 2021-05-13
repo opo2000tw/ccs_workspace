@@ -3,6 +3,7 @@
 	<name>mrr_18xx_mss</name>
 	<comment></comment>
 	<projects>
+		<project>mrr_18xx_dss</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
