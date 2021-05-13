@@ -558,7 +558,7 @@ static void MRR_DSS_initTask(UArg arg0, UArg arg1)
 
         /* Register Chirp Available Listener */
         memset((void*) &listenerCfg, 0, sizeof(SOC_SysIntListenerCfg));
-        listenerCfg.systemInterrupt = SOC_XWR18XX_DSS_INTC_EVENT_CHIRP_AVAIL;
+        listenerCfg.systemInterrupt = SOC_XWR68XX_DSS_INTC_EVENT_CHIRP_AVAIL;
         listenerCfg.listenerFxn = MRR_DSS_chirpIntCallback;
         listenerCfg.arg = 0;
         gMrrDSSMCB.chirpIntHandle = SOC_registerSysIntListener(gMrrDSSMCB.socHandle, &listenerCfg, &errCode);
@@ -569,7 +569,7 @@ static void MRR_DSS_initTask(UArg arg0, UArg arg1)
 
         /* Register Frame Start Listener */
         memset((void*) &listenerCfg, 0, sizeof(SOC_SysIntListenerCfg));
-        listenerCfg.systemInterrupt = SOC_XWR18XX_DSS_INTC_EVENT_FRAME_START;
+        listenerCfg.systemInterrupt = SOC_XWR68XX_DSS_INTC_EVENT_FRAME_START;
         listenerCfg.listenerFxn = MRR_DSS_frameStartIntCallback;
         listenerCfg.arg = 0;
         gMrrDSSMCB.frameStartIntHandle = SOC_registerSysIntListener(gMrrDSSMCB.socHandle, &listenerCfg, &errCode);
@@ -601,7 +601,7 @@ static void MRR_DSS_initTask(UArg arg0, UArg arg1)
     obj = &gMrrDSSMCB.dataPathObj[0];
 
     /* Data path configuration for both subframes */
-    MmwDemo_dataPathConfigBuffers(obj, SOC_XWR18XX_DSS_ADCBUF_BASE_ADDRESS);
+    MmwDemo_dataPathConfigBuffers(obj, SOC_XWR68XX_DSS_ADCBUF_BASE_ADDRESS);
    
     for (ik = 0; ik < NUM_SUBFRAMES; ik ++, obj++)
     {

@@ -75,7 +75,7 @@
 #include <ti/drivers/uart/UART.h>
 #include <ti/drivers/gpio/gpio.h>
 #include <ti/drivers/mailbox/mailbox.h>
-#include <ti/drivers/pinmux/include/pinmux_xwr18xx.h>
+#include <ti/drivers/pinmux/include/pinmux_xwr68xx.h>
 #include <ti/drivers/osal/DebugP.h>
 #include <ti/control/mmwavelink/mmwavelink.h>
 #include <ti/control/mmwave/mmwave.h>
@@ -494,11 +494,11 @@ void Can_Initialize(void)
 
 
     /* Setup the PINMUX to bring out the XWR16xx CAN pins */
-    Pinmux_Set_OverrideCtrl(SOC_XWR18XX_PINE14_PADAE, PINMUX_OUTEN_RETAIN_HW_CTRL, PINMUX_INPEN_RETAIN_HW_CTRL);
-    Pinmux_Set_FuncSel(SOC_XWR18XX_PINE14_PADAE, SOC_XWR18XX_PINE14_PADAE_CANFD_TX);
+    Pinmux_Set_OverrideCtrl(SOC_XWR68XX_PINE14_PADAE, PINMUX_OUTEN_RETAIN_HW_CTRL, PINMUX_INPEN_RETAIN_HW_CTRL);
+    Pinmux_Set_FuncSel(SOC_XWR68XX_PINE14_PADAE, SOC_XWR68XX_PINE14_PADAE_CANFD_TX);
 
-    Pinmux_Set_OverrideCtrl(SOC_XWR18XX_PIND13_PADAD, PINMUX_OUTEN_RETAIN_HW_CTRL, PINMUX_INPEN_RETAIN_HW_CTRL);
-    Pinmux_Set_FuncSel(SOC_XWR18XX_PIND13_PADAD, SOC_XWR18XX_PIND13_PADAD_CANFD_RX);
+    Pinmux_Set_OverrideCtrl(SOC_XWR68XX_PIND13_PADAD, PINMUX_OUTEN_RETAIN_HW_CTRL, PINMUX_INPEN_RETAIN_HW_CTRL);
+    Pinmux_Set_FuncSel(SOC_XWR68XX_PIND13_PADAD, SOC_XWR68XX_PIND13_PADAD_CANFD_RX);
 
      /* Configure the divide value for MCAN source clock */
     SOC_setPeripheralClock(gMrrMSSMCB.socHandle, SOC_MODULE_MCAN, SOC_CLKSOURCE_VCLK, 4U, &errCode);
@@ -1119,24 +1119,24 @@ void MRR_MSS_mssProcessDataPathTask(UArg arg0, UArg arg1)
      * - GPIO Input : Configure pin J13 as GPIO_1 input
      * - GPIO Output: Configure pin K13 as GPIO_2 output
      **********************************************************************/
-    Pinmux_Set_OverrideCtrl(SOC_XWR18XX_PINJ13_PADAC, PINMUX_OUTEN_RETAIN_HW_CTRL, PINMUX_INPEN_RETAIN_HW_CTRL);
-    Pinmux_Set_FuncSel(SOC_XWR18XX_PINJ13_PADAC, SOC_XWR18XX_PINJ13_PADAC_GPIO_1);
-    Pinmux_Set_OverrideCtrl(SOC_XWR18XX_PINK13_PADAZ, PINMUX_OUTEN_RETAIN_HW_CTRL, PINMUX_INPEN_RETAIN_HW_CTRL);
-    Pinmux_Set_FuncSel(SOC_XWR18XX_PINK13_PADAZ, SOC_XWR18XX_PINK13_PADAZ_GPIO_2);
+    Pinmux_Set_OverrideCtrl(SOC_XWR68XX_PINJ13_PADAC, PINMUX_OUTEN_RETAIN_HW_CTRL, PINMUX_INPEN_RETAIN_HW_CTRL);
+    Pinmux_Set_FuncSel(SOC_XWR68XX_PINJ13_PADAC, SOC_XWR68XX_PINJ13_PADAC_GPIO_1);
+    Pinmux_Set_OverrideCtrl(SOC_XWR68XX_PINK13_PADAZ, PINMUX_OUTEN_RETAIN_HW_CTRL, PINMUX_INPEN_RETAIN_HW_CTRL);
+    Pinmux_Set_FuncSel(SOC_XWR68XX_PINK13_PADAZ, SOC_XWR68XX_PINK13_PADAZ_GPIO_2);
 
     /**********************************************************************
      * Setup the SW1 switch on the EVM connected to GPIO_1
      * - This is used as an input
      * - Enable interrupt to be notified on a switch press
      **********************************************************************/
-    GPIO_setConfig (SOC_XWR18XX_GPIO_1, GPIO_CFG_INPUT | GPIO_CFG_IN_INT_RISING | GPIO_CFG_IN_INT_LOW);
-    GPIO_setCallback (SOC_XWR18XX_GPIO_1, MRR_MSS_switchPressFxn);
-    GPIO_enableInt (SOC_XWR18XX_GPIO_1);
+    GPIO_setConfig (SOC_XWR68XX_GPIO_1, GPIO_CFG_INPUT | GPIO_CFG_IN_INT_RISING | GPIO_CFG_IN_INT_LOW);
+    GPIO_setCallback (SOC_XWR68XX_GPIO_1, MRR_MSS_switchPressFxn);
+    GPIO_enableInt (SOC_XWR68XX_GPIO_1);
 
     /**********************************************************************
      * Setup the DS3 LED on the EVM connected to GPIO_2
      **********************************************************************/
-    GPIO_setConfig (SOC_XWR18XX_GPIO_2, GPIO_CFG_OUTPUT);
+    GPIO_setConfig (SOC_XWR68XX_GPIO_2, GPIO_CFG_OUTPUT);
 
     System_printf ("Debug: Data Path management main loop. \n");
     /* Data Path management task Main loop */
@@ -1200,18 +1200,18 @@ static void MRR_MSS_initTask (UArg arg0, UArg arg1)
     /* Pinmux setting */
 
     /* Setup the PINMUX to bring out the UART-1 */
-    Pinmux_Set_OverrideCtrl(SOC_XWR18XX_PINN5_PADBE, PINMUX_OUTEN_RETAIN_HW_CTRL, PINMUX_INPEN_RETAIN_HW_CTRL);    
-    Pinmux_Set_FuncSel(SOC_XWR18XX_PINN5_PADBE, SOC_XWR18XX_PINN5_PADBE_MSS_UARTA_TX);
-    Pinmux_Set_OverrideCtrl(SOC_XWR18XX_PINN4_PADBD, PINMUX_OUTEN_RETAIN_HW_CTRL, PINMUX_INPEN_RETAIN_HW_CTRL);    
-    Pinmux_Set_FuncSel(SOC_XWR18XX_PINN4_PADBD, SOC_XWR18XX_PINN4_PADBD_MSS_UARTA_RX);
+    Pinmux_Set_OverrideCtrl(SOC_XWR68XX_PINN5_PADBE, PINMUX_OUTEN_RETAIN_HW_CTRL, PINMUX_INPEN_RETAIN_HW_CTRL);    
+    Pinmux_Set_FuncSel(SOC_XWR68XX_PINN5_PADBE, SOC_XWR68XX_PINN5_PADBE_MSS_UARTA_TX);
+    Pinmux_Set_OverrideCtrl(SOC_XWR68XX_PINN4_PADBD, PINMUX_OUTEN_RETAIN_HW_CTRL, PINMUX_INPEN_RETAIN_HW_CTRL);    
+    Pinmux_Set_FuncSel(SOC_XWR68XX_PINN4_PADBD, SOC_XWR68XX_PINN4_PADBD_MSS_UARTA_RX);
 
     /* Setup the PINMUX to bring out the UART-3 */
-    Pinmux_Set_OverrideCtrl(SOC_XWR18XX_PINF14_PADAJ, PINMUX_OUTEN_RETAIN_HW_CTRL, PINMUX_INPEN_RETAIN_HW_CTRL);
-    Pinmux_Set_FuncSel(SOC_XWR18XX_PINF14_PADAJ, SOC_XWR18XX_PINF14_PADAJ_MSS_UARTB_TX);
+    Pinmux_Set_OverrideCtrl(SOC_XWR68XX_PINF14_PADAJ, PINMUX_OUTEN_RETAIN_HW_CTRL, PINMUX_INPEN_RETAIN_HW_CTRL);
+    Pinmux_Set_FuncSel(SOC_XWR68XX_PINF14_PADAJ, SOC_XWR68XX_PINF14_PADAJ_MSS_UARTB_TX);
 
     /* Setup the PINMUX to bring out the DSS UART */
-    Pinmux_Set_OverrideCtrl(SOC_XWR18XX_PINP8_PADBM, PINMUX_OUTEN_RETAIN_HW_CTRL, PINMUX_INPEN_RETAIN_HW_CTRL);
-    Pinmux_Set_FuncSel(SOC_XWR18XX_PINP8_PADBM, SOC_XWR18XX_PINP8_PADBM_DSS_UART_TX);
+    Pinmux_Set_OverrideCtrl(SOC_XWR68XX_PINP8_PADBM, PINMUX_OUTEN_RETAIN_HW_CTRL, PINMUX_INPEN_RETAIN_HW_CTRL);
+    Pinmux_Set_FuncSel(SOC_XWR68XX_PINP8_PADBM, SOC_XWR68XX_PINP8_PADBM_DSS_UART_TX);
 
     /* Initialize the UART */
     UART_init();
@@ -1290,7 +1290,7 @@ static void MRR_MSS_initTask (UArg arg0, UArg arg1)
     
     /* Register Chirp Available Listener */
     memset ((void*)&listenerCfg, 0, sizeof(SOC_SysIntListenerCfg));
-    listenerCfg.systemInterrupt   = SOC_XWR18XX_MSS_CHIRP_AVAIL_IRQ;
+    listenerCfg.systemInterrupt   = SOC_XWR68XX_MSS_CHIRP_AVAIL_IRQ;
     listenerCfg.listenerFxn       = MRR_MSS_chirpIntCallback;
     listenerCfg.arg               = 0;
     gMrrMSSMCB.chirpIntHandle = SOC_registerSysIntListener (gMrrMSSMCB.socHandle, &listenerCfg, &errCode);
@@ -1302,7 +1302,7 @@ static void MRR_MSS_initTask (UArg arg0, UArg arg1)
 
     /* Register Frame Start Listener */
     memset ((void*)&listenerCfg, 0, sizeof(SOC_SysIntListenerCfg));
-    listenerCfg.systemInterrupt   = SOC_XWR18XX_MSS_FRAME_START_INT;
+    listenerCfg.systemInterrupt   = SOC_XWR68XX_MSS_FRAME_START_INT;
     listenerCfg.listenerFxn       = MRR_MSS_frameStartIntCallback;
     listenerCfg.arg               = 0;
     gMrrMSSMCB.frameStartIntHandle = SOC_registerSysIntListener (gMrrMSSMCB.socHandle, &listenerCfg, &errCode);
