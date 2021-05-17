@@ -2,34 +2,35 @@
 	"folders": [
 		{
 			"path": "."
-		},
-		{
-			"path": "..\\..\\..\\ti\\mmwave_sdk_03_05_00_04"
-		},
-		{
-			"path": "..\\..\\..\\ti\\bios_6_73_01_01\\packages"
-		},
-		{
-			"path": "..\\..\\..\\ti\\dsplib_c64Px_3_4_0_0\\packages\\ti\\dsplib\\src\\DSP_fft16x16\\c64P"
-		},
-		{
-			"path": "..\\..\\..\\ti\\dsplib_c64Px_3_4_0_0\\packages\\ti\\dsplib\\src\\DSP_fft32x32\\c64P"
-		},
-		{
-			"path": "..\\..\\..\\ti\\mathlib_c674x_3_1_2_1\\packages"
-		},
-		{
-			"path": "..\\..\\..\\ti\\ti-cgt-c6000_8.3.3\\include"
-		},
-		{
-			"path": "..\\..\\..\\ti\\xdctools_3_50_08_24_core\\packages"
-		},
-		{
-			"path": "..\\..\\..\\ti\\ti-cgt-arm_16.9.6.LTS\\include"
-		},
-		{
-			"path": "..\\..\\..\\ti\\ccs1030\\ccs\\tools\\compiler\\gcc-arm-none-eabi-7-2017-q4-major-win32\\arm-none-eabi\\include"
 		}
+		// ,
+		// {
+		// 	"path": "..\\..\\..\\ti\\mmwave_sdk_03_05_00_04"
+		// },
+		// {
+		// 	"path": "..\\..\\..\\ti\\bios_6_73_01_01\\packages"
+		// },
+		// {
+		// 	"path": "..\\..\\..\\ti\\dsplib_c64Px_3_4_0_0\\packages\\ti\\dsplib\\src\\DSP_fft16x16\\c64P"
+		// },
+		// {
+		// 	"path": "..\\..\\..\\ti\\dsplib_c64Px_3_4_0_0\\packages\\ti\\dsplib\\src\\DSP_fft32x32\\c64P"
+		// },
+		// {
+		// 	"path": "..\\..\\..\\ti\\mathlib_c674x_3_1_2_1\\packages"
+		// },
+		// {
+		// 	"path": "..\\..\\..\\ti\\ti-cgt-c6000_8.3.3\\include"
+		// },
+		// {
+		// 	"path": "..\\..\\..\\ti\\xdctools_3_50_08_24_core\\packages"
+		// },
+		// {
+		// 	"path": "..\\..\\..\\ti\\ti-cgt-arm_16.9.6.LTS\\include"
+		// },
+		// {
+		// 	"path": "..\\..\\..\\ti\\ccs1030\\ccs\\tools\\compiler\\gcc-arm-none-eabi-7-2017-q4-major-win32\\arm-none-eabi\\include"
+		// }
 	],
 	"settings": {
 		"files.associations": {

@@ -221,8 +221,10 @@ static int32_t MRR_MSS_CLIBasicCfg (int32_t argc, char* argv[])
     }
 
     /* Setup the calibration frequency: */
-    openCfg.freqLimitLow  = 760U;
-    openCfg.freqLimitHigh = 810U;
+    // openCfg.freqLimitLow  = 760U;
+    // openCfg.freqLimitHigh = 810U;
+    openCfg.freqLimitLow  = 600U;
+    openCfg.freqLimitHigh = 640U;
     openCfg.defaultAsyncEventHandler = MMWave_DefaultAsyncEventHandler_MSS;
     
     /* Initialize the minimal configuration: */

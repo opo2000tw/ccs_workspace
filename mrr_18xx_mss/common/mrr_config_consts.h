@@ -108,9 +108,9 @@
 #define NUM_PROFILES                        (2U) /* one for MRR80, one for USRR20 */
 
 /**! @brief The multi-mode Radar mode of operation. */
-#define SUBFRAME_CONF_MRR_USRR                   /* Two subframes, MRR followed by USRR20. */
+// #define SUBFRAME_CONF_MRR_USRR                   /* Two subframes, MRR followed by USRR20. */
 /**! @brief The USRR only mode of operation. */
-//#define SUBFRAME_CONF_USRR                   /* One subframe USRR20. */
+#define SUBFRAME_CONF_USRR                   /* One subframe USRR20. */
 /**! @brief The MRR only mode of operation. */
 // #define SUBFRAME_CONF_MRR                   /* One subframe MRR80. */
 

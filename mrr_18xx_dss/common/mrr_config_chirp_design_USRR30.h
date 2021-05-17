@@ -1,8 +1,8 @@
 /*
- *   @file  srr_config_consts.h
+ *   @file  mrr_config_chirp_design_USRR30.h
  *
  *   @brief
- *      This file holds constants related to the USRR20 chirp configuration. 
+ *      This file holds constants related to the USRR30 chirp configuration. 
  *
  *  \par
  *  NOTE:
@@ -37,7 +37,7 @@
  *  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-/*! @brief Ultra short range chirp profile - 20 m range, 4.3cm resolution. better angular resolution,  approximately 18kmph max - vel. */
+/*! @brief Ultra short range chirp profile - 30 m range, 4.3cm resolution. better angular resolution,  approximately 18kmph max - vel. */
 #define PROFILE_USRR_PROFILE_ID              (1U)
 #define PROFILE_USRR_HPFCORNER_FREQ1_VAL     RL_RX_HPF1_175_KHz
 #define PROFILE_USRR_HPFCORNER_FREQ2_VAL     RL_RX_HPF2_350_KHz
