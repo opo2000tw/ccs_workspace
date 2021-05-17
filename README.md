@@ -23,3 +23,23 @@ https://e2e.ti.com/support/tools/code-composer-studio-group/ccs/f/code-composer-
 
 ```
 
+```
+[C674X_0] Heap L1 : size 16384 (0x4000), free 6144 (0x1800)
+Heap L3 : size 1048576 (0x100000), free 0 (0x0)
+Heap L1 : size 16384 (0x4000), free 1000 (0x3e8)
+Heap L3 : size 1048576 (0x100000), free 262144 (0x40000)
+Heap L2 : size 102400 (0x19000), free 21488 (0x53f0)
+Heap L2 : size 102400 (0x19000), free 14432 (0x3860)
+[Cortex_R4_0] Debug: Launched the Initialization Task
+Debug: Initialized the mmWave module
+Debug: Synchronized the mmWave module
+Error: MMWDemoMSS mmWave open configuration failed [Error code -204406306]
+Error: Please ensure that the XXXCfg CLI command is invoked before starting the sensor
+
+Error code 3119 -> 3100 + 0019
+#define MMWAVE_ERRNO_BASE                    (-3100)
+/**
+ * @brief   Error Code: mmWave link BSS calibration configuration failed
+ */
+#define MMWAVE_ECALCFG                  (MMWAVE_ERRNO_BASE-19)
+```
