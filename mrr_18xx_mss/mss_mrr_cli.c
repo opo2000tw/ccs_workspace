@@ -400,6 +400,7 @@ static int32_t MRR_MSS_CLIAdvancedFrameCfg (int32_t argc, char* argv[])
  */
 void MRR_MSS_CLIInit (void)
 {
+    DebugP_log0("App: MRR_MSS_CLIInit\n");
     CLI_Cfg     cliCfg;
     static char* dummy[1];
 

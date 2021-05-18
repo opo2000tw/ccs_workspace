@@ -89,7 +89,7 @@ SECTIONS
         */
         dss_data_path.oe674(.text:rangeBasedPruning)
        /* dss_data_path.oe674(.text:MmwDemo_magnitudeSquared)*/
-        dss_data_path.oe674(.text:azimuthProcessing)
+        // dss_data_path.oe674(.text:azimuthProcessing)
         dss_data_path.oe674(.text:MmwDemo_waitEndOfChirps)
         clusteringDBscan.oe674(.text:clusteringDBscan_findNeighbors2Fixed)
         Extended_Kalman_Filter_xyz.oe674(.text:isTargetWithinDataAssociationThresh)
@@ -105,7 +105,7 @@ SECTIONS
     {
         libsoc_xwr68xx.ae674 (.text:SOC_init)
         dss_main.oe674 (.text:main)
-        dss_main.oe674 (.text:MmwDemo_populateMRR)
+        // dss_main.oe674 (.text:MmwDemo_populateMRR)
         dss_main.oe674 (.text:MmwDemo_populateUSRR)
         dss_data_path.oe674 (.text:MmwDemo_dataPathInitEdma)
     } > L3SRAM PAGE 0

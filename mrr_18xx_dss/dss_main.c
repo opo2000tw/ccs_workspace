@@ -309,6 +309,7 @@ static void MRR_DSS_mmWaveTask(UArg arg0, UArg arg1)
             MmwDemo_mboxReadProc();
         }
     }
+    DebugP_log0("App: MRR_DSS_mmWaveTask\n");
 }
 
 /**

@@ -20,7 +20,7 @@
                 "MMWAVE_L3RAM_NUM_BANK=8",
                 "SHMEM_ALLOC=0x00000008",
                 "DOWNLOAD_FROM_CCS",
-                "DebugP_ASSERT_ENABLED",
+                "DebugP_ASSERT_ENABLED=1",
                 "",
                 "SOC_XWR68XX",
                 "SUBSYS_DSS",
@@ -30,7 +30,9 @@
                 "MMWAVE_L3RAM_SIZE=0x100000",
                 "SHMEM_ALLOC=0x00000008",
                 "DOWNLOAD_FROM_CCS",
-                "DebugP_ASSERT_ENABLED"
+                "DebugP_ASSERT_ENABLED=1",
+                "",
+                "DebugP_LOG_ENABLED=1"
             ],
             "cStandard": "gnu99",
             "cppStandard": "gnu++11",

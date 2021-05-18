@@ -69,6 +69,7 @@
 #include <ti/sysbios/family/c64p/EventCombiner.h>
 #endif
 #define DebugP_ASSERT_ENABLED 1
+#define DebugP_LOG_ENABLED 1
 #include <ti/drivers/osal/DebugP.h>
 #include <assert.h>
 #include <ti/common/sys_common.h>

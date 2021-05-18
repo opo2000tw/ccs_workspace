@@ -61,13 +61,17 @@ tms570_Core_asm.obj: family/arm/v7r/tms570/Core_asm.sv7R makefile
 	@-$(call RM, $@)
 	$(ASSEMBLE) --output_file=tms570_Core_asm.obj
 
+a15_TimestampProvider_asm.obj: family/arm/a15/TimestampProvider_asm.asm makefile
+	@-$(call RM, $@)
+	$(ASSEMBLE) --output_file=a15_TimestampProvider_asm.obj
 
-BIOS.obj: BIOS.c family/arm/IntrinsicsSupport.c family/arm/TaskSupport.c knl/Clock.c knl/Idle.c knl/Intrinsics.c knl/Event.c knl/Queue.c knl/Semaphore.c knl/Swi.c knl/Task.c heaps/HeapBuf.c heaps/HeapMem.c family/arm/v7r/vim/Hwi.c family/arm/exc/Exception.c gates/GateHwi.c gates/GateMutex.c hal/Cache.c hal/CacheNull.c hal/Core.c hal/Hwi.c hal/Hwi_stack.c hal/Hwi_startup.c family/arm/v7r/tms570/Core.c timers/rti/Timer.c xdc/runtime/xdc_noinit.c xdc/runtime/Assert.c xdc/runtime/Core-mem.c xdc/runtime/Core-smem.c xdc/runtime/Core-label.c xdc/runtime/Core-params.c xdc/runtime/Diags.c xdc/runtime/Error.c xdc/runtime/Gate.c xdc/runtime/Log.c xdc/runtime/Memory.c xdc/runtime/Registry.c xdc/runtime/Startup.c xdc/runtime/System.c xdc/runtime/SysStd.c xdc/runtime/Text.c makefile
+
+BIOS.obj: BIOS.c family/arm/IntrinsicsSupport.c family/arm/TaskSupport.c knl/Clock.c knl/Idle.c knl/Intrinsics.c knl/Event.c knl/Queue.c knl/Semaphore.c knl/Swi.c knl/Task.c heaps/HeapBuf.c heaps/HeapMem.c family/arm/v7r/vim/Hwi.c family/arm/exc/Exception.c gates/GateHwi.c gates/GateMutex.c hal/Cache.c hal/CacheNull.c hal/Core.c hal/Hwi.c hal/Hwi_stack.c hal/Hwi_startup.c family/arm/v7r/tms570/Core.c timers/rti/Timer.c family/arm/a15/TimestampProvider.c xdc/runtime/xdc_noinit.c xdc/runtime/Assert.c xdc/runtime/Core-mem.c xdc/runtime/Core-smem.c xdc/runtime/Core-label.c xdc/runtime/Core-params.c xdc/runtime/Diags.c xdc/runtime/Error.c xdc/runtime/Gate.c xdc/runtime/Log.c xdc/runtime/LoggerBuf.c xdc/runtime/Memory.c xdc/runtime/Registry.c xdc/runtime/Startup.c xdc/runtime/System.c xdc/runtime/SysStd.c xdc/runtime/Text.c makefile
 	@-$(call RM, $@)
 	@echo cler4f $< ...
 	@$(CC) $(BIOS_DEFS) $(XOPTS) $(INCS) $(subst makefile,,$^)
 
-sysbios.aer4f: BIOS.obj arm_IntrinsicsSupport_asm.obj arm_TaskSupport_asm.obj vim_Hwi_asm.obj vim_Hwi_asm_switch.obj exc_Exception_asm.obj tms570_Core_asm.obj
+sysbios.aer4f: BIOS.obj arm_IntrinsicsSupport_asm.obj arm_TaskSupport_asm.obj vim_Hwi_asm.obj vim_Hwi_asm_switch.obj exc_Exception_asm.obj tms570_Core_asm.obj a15_TimestampProvider_asm.obj
 	@-$(call RM, $@)
 	@echo arer4f $^ ...
 	@$(AR) $@ $^

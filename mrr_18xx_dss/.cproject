@@ -65,7 +65,8 @@
 									<listOptionValue builtIn="false" value="MMWAVE_L3RAM_SIZE=0x100000"/>
 									<listOptionValue builtIn="false" value="SHMEM_ALLOC=0x00000008"/>
 									<listOptionValue builtIn="false" value="DOWNLOAD_FROM_CCS"/>
-									<listOptionValue builtIn="false" value="DebugP_ASSERT_ENABLED"/>
+									<listOptionValue builtIn="false" value="DebugP_ASSERT_ENABLED=1"/>
+									<listOptionValue builtIn="false" value="DebugP_LOG_ENABLED=1"/>
 								</option>
 								<option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.GEN_FUNC_SUBSECTIONS.1322012707" name="Place each function in a separate subsection (--gen_func_subsections, -mo)" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.GEN_FUNC_SUBSECTIONS" useByScannerDiscovery="false" value="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.GEN_FUNC_SUBSECTIONS.on" valueType="enumerated"/>
 								<option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.OPT_LEVEL.662128668" name="Optimization level (--opt_level, -O)" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.OPT_LEVEL" useByScannerDiscovery="false" value="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.OPT_LEVEL.3" valueType="enumerated"/>
@@ -150,6 +151,9 @@
 							</tool>
 						</toolChain>
 					</folderInfo>
+					<sourceEntries>
+						<entry excluding="src" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+					</sourceEntries>
 				</configuration>
 			</storageModule>
 			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
@@ -303,6 +307,9 @@
 							</tool>
 						</toolChain>
 					</folderInfo>
+					<sourceEntries>
+						<entry excluding="src" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+					</sourceEntries>
 				</configuration>
 			</storageModule>
 			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
@@ -313,4 +320,5 @@
 		<project id="mrr_18xx_dss.com.ti.ccstudio.buildDefinitions.C6000.ProjectType.834626730" name="C6000" projectType="com.ti.ccstudio.buildDefinitions.C6000.ProjectType"/>
 	</storageModule>
 	<storageModule moduleId="scannerConfiguration"/>
+	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets"/>
 </cproject>
