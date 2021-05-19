@@ -265,6 +265,8 @@ sensorStart
 #define CHIRP_HCC_7_ADC_START_TIME_VAL      (0U)
 #define CHIRP_HCC_7_TX_CHANNEL              (4U)
 
+// Cfg_AdvFrameCfgInitParams
+// LINK mmwave_sdk_68xx_hcc_mss/mss/hc_config_profile_advanced_subframe.h:271
 #define ADVFRAME_HCC_NUM_SUBFRAMES          (4U)
 #define ADVFRAME_HCC_FORCE_PROFILE          (0U)
 #define ADVFRAME_HCC_NUM_FRAMES             (0U)

@@ -52,7 +52,30 @@
 			"mathutils.h": "c",
 			"mmw_mss.h": "c",
 			"mmw_config.h": "c",
-			"system.h": "c"
-		}
+			"system.h": "c",
+			"mrr_config_consts.h": "c",
+			"dsp_fft32x32.h": "c",
+			"dsp_fft16x16.h": "c"
+		},
+		"files.exclude": {
+			"**/.git": true,
+			"**/.svn": true,
+			"**/.hg": true,
+			"**/CVS": true,
+			"**/.DS_Store": true,
+			"**/mmwave_sdk_68xx_dsp_mss": true,
+			"mmwave_sdk_68xx_dsp_mss": true,
+			"**/mmwave_sdk_68xx_dsp_dss": true,
+			"mmwave_sdk_68xx_dsp_dss": true,
+			"**/mmwave_sdk_68xx_hcc_dss": true,
+			"mmwave_sdk_68xx_hcc_dss": true,
+			"**/mmwave_sdk_68xx_hcc_mss": true,
+			"mmwave_sdk_68xx_hcc_mss": true,
+			"**/mmwave_sdk_18xx_mss": true,
+			"mmwave_sdk_18xx_mss": true,
+			"**/mmwave_sdk_18xx_dss": true,
+			"mmwave_sdk_18xx_dss": true
+		},
+		"explorerExclude.backup": null
 	}
 }
