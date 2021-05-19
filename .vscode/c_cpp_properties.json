@@ -1,0 +1,55 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                // "${workspaceFolder}/**",
+                "${workspaceFolder}/mmwave_sdk_18xx_dss/**",
+                "${workspaceFolder}/mmwave_sdk_18xx_mss/**",
+                "${workspaceFolder}/mmwave_sdk_68xx_dsp_dss/**",
+                "${workspaceFolder}/mmwave_sdk_68xx_dsp_mss/**",
+                "${workspaceFolder}/mmwave_sdk_68xx_hcc_dss/**",
+                "${workspaceFolder}/mmwave_sdk_68xx_hcc_mss/**",
+                "${workspaceFolder}/mrr_18xx_dss/**",
+                "${workspaceFolder}/mrr_18xx_mss/**",
+                "C:/ti/xdctools_3_50_08_24_core/packages/**",
+                "C:/ti/ti-cgt-c6000_8.3.3/include/**",
+                "C:/ti/bios_6_73_01_01/packages/**",
+                "C:/ti/mmwave_sdk_03_05_00_04/packages/**",
+                "C:/ti/dsplib_c64Px_3_4_0_0/packages/ti/dsplib/src/DSP_fft16x16/c64P/**",
+                "C:/ti/dsplib_c64Px_3_4_0_0/packages/ti/dsplib/src/DSP_fft32x32/c64P/**"
+            ],
+            "defines": [
+                "SOC_XWR18XX",
+                "SUBSYS_MSS",
+                "_LITTLE_ENDIAN",
+                "MMWAVE_SHMEM_TCMA_NUM_BANK=0",
+                "MMWAVE_SHMEM_TCMB_NUM_BANK=0",
+                "MMWAVE_SHMEM_BANK_SIZE=0x20000",
+                "MMWAVE_L3RAM_NUM_BANK=8",
+                "SHMEM_ALLOC=0x00000008",
+                "DOWNLOAD_FROM_CCS",
+                "DebugP_ASSERT_ENABLED=1",
+                "",
+                "SOC_XWR18XX",
+                "SUBSYS_DSS",
+                "ENABLE_ADVANCED_FRAME",
+                "MMWAVE_SHMEM_BANK_SIZE=0x20000",
+                "MMWAVE_L3RAM_NUM_BANK=8",
+                "MMWAVE_L3RAM_SIZE=0x100000",
+                "SHMEM_ALLOC=0x00000008",
+                "DOWNLOAD_FROM_CCS",
+                "DebugP_ASSERT_ENABLED=1",
+                "",
+                "DebugP_LOG_ENABLED=1",
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "cStandard": "gnu99",
+            "cppStandard": "gnu++11",
+            "intelliSenseMode": "windows-msvc-x64"
+        }
+    ],
+    "version": 4
+}
