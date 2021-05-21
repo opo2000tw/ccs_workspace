@@ -1420,32 +1420,7 @@ void MmwDemo_populateMRR(MmwDemo_DSS_DataPathObj* obj, uint16_t subframeIndx)
     /*! @brief DC Range antenna signature callibration configuration */
     obj->calibDcRangeSigCfg.enabled = 0;
     obj->txAntennaCount = SUBFRAME_MRR_NUM_TX;
-   
-#ifdef LOW_THRESHOLD_FOR_USRR
-   /*! @brief Min and max range configuration. */
-    obj->minRange = (uint16_t) (0.3f * (1 << obj->xyzOutputQFormat));
-    obj->maxRange = (uint16_t) ROUND_TO_INT32(obj->rangeResolution*SUBFRAME_MRR_NUM_CMPLX_ADC_SAMPLES * (0.9f) * (1 << obj->xyzOutputQFormat));
 
-    /*! @brief CFAR thresholds are varied as a function of range */
-    obj->SNRThresholds[0].rangelim = (uint16_t) (10.0f * (float)(1 << obj->xyzOutputQFormat));
-    obj->SNRThresholds[0].threshold = convertSNRdBtoThreshold(1, 16.0f,CFARTHRESHOLD_N_BIT_FRAC);
-
-    obj->SNRThresholds[1].rangelim = (uint16_t) (35.0f * (float)(1 << obj->xyzOutputQFormat));
-    obj->SNRThresholds[1].threshold = convertSNRdBtoThreshold(1, 15.0f, CFARTHRESHOLD_N_BIT_FRAC);
-
-    obj->SNRThresholds[2].rangelim = 65535;
-    obj->SNRThresholds[2].threshold = convertSNRdBtoThreshold(1, SUBFRAME_MRR_MIN_SNR_dB, CFARTHRESHOLD_N_BIT_FRAC);
-
-    /*! @brief peakVal thresholds are varied as a function of range (disabled for the MRR configuration)*/
-    obj->peakValThresholds[0].rangelim = 65535;
-    obj->peakValThresholds[0].threshold = 0;
-
-    obj->peakValThresholds[1].rangelim = 65535;
-    obj->peakValThresholds[1].threshold = 0;
-
-    obj->peakValThresholds[2].rangelim = 65535;
-    obj->peakValThresholds[2].threshold = 0;
-#else    
     /*! @brief Min and max range configuration. */
     obj->minRange = (uint16_t) (0.5f * (1 << obj->xyzOutputQFormat));
     obj->maxRange = (uint16_t) ROUND_TO_INT32(obj->rangeResolution*SUBFRAME_MRR_NUM_CMPLX_ADC_SAMPLES * (0.9f) * (1 << obj->xyzOutputQFormat));
@@ -1469,7 +1444,7 @@ void MmwDemo_populateMRR(MmwDemo_DSS_DataPathObj* obj, uint16_t subframeIndx)
 
     obj->peakValThresholds[2].rangelim = 65535;
     obj->peakValThresholds[2].threshold = 0;
-#endif
+
     obj->log2numVirtAnt = LOG2_APPROX(SUBFRAME_MRR_NUM_VIRT_ANT);
     
     obj->maxVelEnhStruct.velResolutionFastChirp     =   SUBFRAME_MRR_CHIRPTYPE_0_VEL_RESOLUTION_M_P_S; /* Meters/sec */
@@ -1572,28 +1547,7 @@ void MmwDemo_populateUSRR(MmwDemo_DSS_DataPathObj* obj, uint16_t subframeIndx)
     obj->txAntennaCount = SUBFRAME_USRR_NUM_TX;
 
     obj->log2numVirtAnt = LOG2_APPROX(SUBFRAME_USRR_NUM_VIRT_ANT);
-#ifdef LOW_THRESHOLD_FOR_USRR
-    /*! @brief CFAR thresholds are varied as a function of range */
-    obj->SNRThresholds[0].rangelim = (uint16_t) (6.0f * (float)(1U << obj->xyzOutputQFormat));
-    obj->SNRThresholds[0].threshold = convertSNRdBtoThreshold(1U, 13.0f, CFARTHRESHOLD_N_BIT_FRAC);
 
-    obj->SNRThresholds[1].rangelim = (uint16_t) (10.0f * (float)(1U << obj->xyzOutputQFormat));
-    obj->SNRThresholds[1].threshold = convertSNRdBtoThreshold(1U, 12.0f, CFARTHRESHOLD_N_BIT_FRAC);
-
-    obj->SNRThresholds[2].rangelim = 65535;
-    obj->SNRThresholds[2].threshold = convertSNRdBtoThreshold(1U, 12.0f, CFARTHRESHOLD_N_BIT_FRAC);
-    
-    /*! @brief peakVal thresholds are varied as a function of range (meant to remove cases of 
-     * clutter being detected too when we drive the car.) Thresholds were derived from experiments.*/
-    obj->peakValThresholds[0].rangelim = (uint16_t) (3.0f * (float) (1U << obj->xyzOutputQFormat));
-    obj->peakValThresholds[0].threshold = (27000 >> obj->log2numVirtAnt);
-    
-    obj->peakValThresholds[1].rangelim = 65535;
-    obj->peakValThresholds[1].threshold = 0;
-
-    obj->peakValThresholds[2].rangelim = 65535;
-    obj->peakValThresholds[2].threshold = 0;
-#else
     /*! @brief CFAR thresholds are varied as a function of range */
     obj->SNRThresholds[0].rangelim = (uint16_t) (6.0f * (float)(1U << obj->xyzOutputQFormat));
     obj->SNRThresholds[0].threshold = convertSNRdBtoThreshold(1, 16.0f, CFARTHRESHOLD_N_BIT_FRAC);
@@ -1614,7 +1568,6 @@ void MmwDemo_populateUSRR(MmwDemo_DSS_DataPathObj* obj, uint16_t subframeIndx)
 
     obj->peakValThresholds[2].rangelim = 65535;
     obj->peakValThresholds[2].threshold = 0;
-#endif
     
     /*! Configuring the dbSCan for car like objects. These numbers are derived from field tests */
     obj->dbScanInstance.epsilon       =   1.7f;

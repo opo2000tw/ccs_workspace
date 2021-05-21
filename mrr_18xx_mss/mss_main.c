@@ -206,24 +206,6 @@ static void MRR_MSS_stopFxn(void);
 static void MRR_MSS_initTask (UArg arg0, UArg arg1);
 static void MRR_MSS_mmWaveCtrlTask (UArg arg0, UArg arg1);
 
-#ifdef USE_LVDS_INTERFACE_FOR_OBJECT_DATA_TX
-static int32_t MRR_MSS_configureStreaming();
-static int32_t MRR_MSS_EDMAAllocateCBUFFChannel (CBUFF_EDMAInfo* ptrEDMAInfo, CBUFF_EDMAChannelCfg* ptrEDMACfg);
-static void MRR_MSS_EDMAFreeCBUFFChannel(CBUFF_EDMAChannelCfg* ptrEDMACfg);
-static EDMA_Handle MRR_MSS_openEDMA(uint8_t instance);
-int32_t MRR_MSS_initEDMA(uint8_t instance);
-static void MRR_MSS_edmaErrorCallbackFxn(EDMA_Handle handle, EDMA_errorInfo_t* errorInfo);
-static void MRR_MSS_edmaTransferControllerErrorCallbackFxn(EDMA_Handle handle,
-                                                    EDMA_transferControllerErrorInfo_t* errorInfo);
-
-/*! @brief
- *  The global variable gwSwUserBuffer will be filled with the object data, and send over LVDS. The 
- * size of thar array is determined by the largest message possible and is given by 
- * Header, TLV (3 of them) + 'detected objects' +  cluster + trackers + parking Assist.*/
-#pragma DATA_ALIGN(gSwUserBuffer, 32);
-volatile uint16_t gSwUserBuffer[2048];
-#endif
-
 
 
 /**
@@ -916,40 +898,6 @@ static void MmwDemo_mboxReadTask(UArg arg0, UArg arg1)
             {
                 case MMWDEMO_DSS2MSS_DETOBJ_READY:
                     /* Got detected objects , to be shipped out shipped out through UART */
-#ifdef USE_LVDS_INTERFACE_FOR_OBJECT_DATA_TX
-                    {
-                        int32_t errCode;
-                        volatile uint32_t totalPacketLen = 0;
-                        uint32_t itemIdx;
-                        uint8_t *swUserBuffer = (uint8_t *)&gSwUserBuffer[0];
-
-                        /* header */
-                        memcpy(&swUserBuffer[totalPacketLen], (uint8_t*)&message.body.detObj.header, sizeof(MmwDemo_output_message_header));
-                        totalPacketLen = sizeof(MmwDemo_output_message_header);
-                        
-                        /* TLVs */
-                        for (itemIdx = 0;  itemIdx < message.body.detObj.header.numTLVs; itemIdx++)
-                        {
-                            memcpy(&swUserBuffer[totalPacketLen], (uint8_t*)&message.body.detObj.tlv[itemIdx], sizeof(MmwDemo_output_message_tl));
-                        
-                            totalPacketLen += sizeof(MmwDemo_output_message_tl);
-                            
-                            memcpy(&swUserBuffer[totalPacketLen], 
-                                   (uint8_t*)SOC_translateAddress(message.body.detObj.tlv[itemIdx].address,
-                                   SOC_TranslateAddr_Dir_FROM_OTHER_CPU,NULL), message.body.detObj.tlv[itemIdx].length);
-                            
-                            totalPacketLen += message.body.detObj.tlv[itemIdx].length;
-                        }
-
-                        DebugP_assert(totalPacketLen < sizeof(gSwUserBuffer));
-                        
-                        /* Deactivate the hardware session */
-                        DebugP_assert (CBUFF_deactivateSession (gMrrMSSMCB.swSessionHandle, &errCode) == 0);
-
-                        /* Activate the hardware session */
-                        DebugP_assert (CBUFF_activateSession (gMrrMSSMCB.swSessionHandle, &errCode) == 0);
-                    }
-#else
                     {
                         uint32_t totalPacketLen;
                         uint32_t numPaddingBytes;
@@ -1000,7 +948,6 @@ static void MmwDemo_mboxReadTask(UArg arg0, UArg arg1)
                                                            padding,numPaddingBytes);
                         }
                     }
-#endif
                     /* Send a message to MSS to log the output data */
                     memset((void *)&message, 0, sizeof(MmwDemo_message));
 
@@ -1380,20 +1327,6 @@ static void MRR_MSS_initTask (UArg arg0, UArg arg1)
         gMrrMSSMCB.numChirpsPerSubframe[0] = SUBFRAME_USRR_NUM_CHIRPS_TOTAL;
     #endif
     #endif
-    
-#ifdef USE_LVDS_INTERFACE_FOR_OBJECT_DATA_TX
-    /* Configure the LVDS streaming interface.*/
-    {
-        int32_t streamConfiguration = MRR_MSS_configureStreaming() ;
-    
-        if (streamConfiguration != 0)
-        {
-            System_printf ("Error: Unable to activate the Streaming Session [Error code %d]\n", streamConfiguration);
-                
-            DebugP_assert (0);   
-        }
-    }
-#endif
 
     /*****************************************************************************
      * Launch the mmWave control execution task
