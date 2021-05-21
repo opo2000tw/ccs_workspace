@@ -92,11 +92,11 @@
 /*! @brief LVDS based object transfer. 
  * The following line (if uncommented) uses the LVDS lanes to transfer object detection data
  * to the PC. Needs an LVDS receiver. Hasn't been tested with the TSW1400. */
-// #define USE_LVDS_INTERFACE_FOR_OBJECT_DATA_TX 
+// #define USE_LVDS_INTERFACE_FOR_OBJECT_DATA_TX //
 /*! @brief Reduced Thresholds. 
  * The following line (if uncommented) reduces thresholds for the USRR detection algorithm 
  * to enable the detection of weak targets.  */
-// #define LOW_THRESHOLD_FOR_USRR 
+// #define LOW_THRESHOLD_FOR_USRR //
 /*! @brief 120m max range. 
  * The MRR was initially designed for 80m, but with a slight configuration change will work at 120m (boresight). 
  * Uncomment the following line for enabling that config. */                     
