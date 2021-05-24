@@ -159,7 +159,7 @@ sensorStart
  */
 #pragma region subframe
 // ???
-#define GUI_HCC_0_SUBFRAME_IDX              (-1) // ???
+#define GUI_HCC_0_SUBFRAME_IDX              (-1) // @??
 #define GUI_HCC_0_DETECTED_OBJECTS          (1U)
 #define GUI_HCC_0_LOG_MAGNITUDE_RANGE       (1U)
 #define GUI_HCC_0_NOISE_PROFILE             (1U)
@@ -170,7 +170,7 @@ sensorStart
 // LINK mmwave_sdk_68xx_hcc_mss/mmw_cli.c:121
 
 // ???
-#define CFAR_HCC_0_SUBFRAME_IDX             (-1) // ???
+#define CFAR_HCC_0_SUBFRAME_IDX             (-1) // @??
 #define CFAR_HCC_0_PROC_DIRECTION           (0U)
 #define CFAR_HCC_0_MODE                     (2U)
 #define CFAR_HCC_0_NOISE_WIN                (8U)
@@ -192,14 +192,14 @@ sensorStart
 // LINK mmwave_sdk_68xx_hcc_mss/mmw_cli.c:194
 
 // ???
-#define MULTI_OBJ_BEAM_HCC_0_SUBFRAME_IDX   (-1) // ???
+#define MULTI_OBJ_BEAM_HCC_0_SUBFRAME_IDX   (-1) // @??
 #define MULTI_OBJ_BEAM_HCC_0_ENABLED        (1U)
 #define MULTI_OBJ_BEAM_HCC_0_THRESHOLD      (0.5f)
 // -> MmwDemo_HCCMultiObjBeamForming
 // LINK mmwave_sdk_68xx_hcc_mss/mmw_cli.c:474
 
 // ???
-#define CALIB_DC_RANGE_HCC_0_SUBFRAME_IDX   (-1) /// ???
+#define CALIB_DC_RANGE_HCC_0_SUBFRAME_IDX   (-1) /// @??
 #define CALIB_DC_RANGE_HCC_0_ENABLED        (0U)
 #define CALIB_DC_RANGE_HCC_0_NEG_BIN_IDX    (-5)
 #define CALIB_DC_RANGE_HCC_0_POS_BIN_IDX    (8U)
@@ -208,7 +208,7 @@ sensorStart
 // LINK mmwave_sdk_68xx_hcc_mss/mmw_cli.c:532
 
 // ???
-#define CFAR_FOV_HCC_0_SUBFRAME_IDX         (-1) /// ???
+#define CFAR_FOV_HCC_0_SUBFRAME_IDX         (-1) // @??
 #define CFAR_FOV_HCC_0_PROC_DIRECTION       (0U)
 #define CFAR_FOV_HCC_0_MINIMUM              (0.25f)
 #define CFAR_FOV_HCC_0_MAXIMUM              (9.0f)
@@ -220,7 +220,7 @@ sensorStart
 // LINK mmwave_sdk_68xx_hcc_mss/mmw_cli.c:325
 
 // ???
-#define BPM_HCC_SUBFRAME_IDX                (-1)
+#define BPM_HCC_SUBFRAME_IDX                (-1) // @??
 #define BPM_HCC_ENABLED                     (0U)
 #define BPM_HCC_CHIRP_0_IDX                 (0U)
 #define BPM_HCC_CHIRP_1_IDX                 (0U)
