@@ -103,8 +103,8 @@
 #define MRR_RANGE_120m 
 /** @}*/ 
 
-#define NUM_RX_CHANNELS                        (4U)
-#define NUM_CHIRP_PROG                        (5U) /* Two for MRR80, Three for USRR20 */
+#define NUM_RX_CHANNELS                     (4U)
+#define NUM_CHIRP_PROG                      (5U) /* Two for MRR80, Three for USRR20 */
 #define NUM_PROFILES                        (2U) /* one for MRR80, one for USRR20 */
 
 /**! @brief The multi-mode Radar mode of operation. */
