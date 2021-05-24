@@ -16,11 +16,13 @@
                 "C:/ti/ti-cgt-c6000_8.3.3/include/**",
                 "C:/ti/bios_6_73_01_01/packages/**",
                 "C:/ti/mmwave_sdk_03_05_00_04/packages/**",
-                "C:/ti/dsplib_c64Px_3_4_0_0/packages/ti/dsplib/src/DSP_fft16x16/c64P/**",
-                "C:/ti/dsplib_c64Px_3_4_0_0/packages/ti/dsplib/src/DSP_fft32x32/c64P/**",
+                "C:/ti/mathlib_c674x_3_1_2_1/packages/ti/mathlib/**",
+                "C:/ti/dsplib_c64Px_3_4_0_0/packages/ti/dsplib/src/DSP_fft16x16/c64P/",
+                "C:/ti/dsplib_c64Px_3_4_0_0/packages/ti/dsplib/src/DSP_fft32x32/c64P/",
                 "${workspaceFolder}/mrr_18xx_mss/src"
             ],
             "defines": [
+                "xdc_target_types__=ti/targets/std.h",
                 "SOC_XWR18XX",
                 "SUBSYS_MSS",
                 "_LITTLE_ENDIAN",
