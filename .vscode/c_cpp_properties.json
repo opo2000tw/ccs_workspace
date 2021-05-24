@@ -17,7 +17,8 @@
                 "C:/ti/bios_6_73_01_01/packages/**",
                 "C:/ti/mmwave_sdk_03_05_00_04/packages/**",
                 "C:/ti/dsplib_c64Px_3_4_0_0/packages/ti/dsplib/src/DSP_fft16x16/c64P/**",
-                "C:/ti/dsplib_c64Px_3_4_0_0/packages/ti/dsplib/src/DSP_fft32x32/c64P/**"
+                "C:/ti/dsplib_c64Px_3_4_0_0/packages/ti/dsplib/src/DSP_fft32x32/c64P/**",
+                "${workspaceFolder}/mrr_18xx_mss/src"
             ],
             "defines": [
                 "SOC_XWR18XX",

@@ -675,7 +675,7 @@ static void MRR_MSS_frameStartIntCallback(uintptr_t arg)
 static int32_t MRR_MSS_eventFxn(uint16_t msgId, uint16_t sbId, uint16_t sbLen, uint8_t *payload)
 {
     uint16_t asyncSB = RL_GET_SBID_FROM_UNIQ_SBID(sbId);
-
+    // System_printf("%d,%d\r\n",msgId,asyncSB);
     /* Process the received message: */
     switch (msgId)
     {
