@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?fileVersion 4.0.0?><cproject storage_type_id="org.eclipse.cdt.core.XmlProjectDescriptionStorage">
+	<storageModule configRelations="2" moduleId="org.eclipse.cdt.core.settings">
+		<cconfiguration id="com.ti.ccstudio.buildDefinitions.TMS470.Debug.383605736">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="com.ti.ccstudio.buildDefinitions.TMS470.Debug.383605736" moduleId="org.eclipse.cdt.core.settings" name="Debug">
+				<externalSettings/>
+				<extensions>
+					<extension id="com.ti.ccstudio.binaryparser.CoffParser" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="com.ti.ccstudio.errorparser.CoffErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.rtsc.xdctools.parsers.ErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="com.ti.ccstudio.errorparser.AsmErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="com.ti.ccstudio.errorparser.LinkErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactExtension="xer4f" artifactName="xwr68xx_mmw_demo_hcc_mss" buildProperties="" cleanCommand="${CG_CLEAN_CMD}" description="" errorParsers="org.eclipse.rtsc.xdctools.parsers.ErrorParser;org.eclipse.cdt.core.GmakeErrorParser;com.ti.ccstudio.errorparser.CoffErrorParser;com.ti.ccstudio.errorparser.AsmErrorParser;com.ti.ccstudio.errorparser.LinkErrorParser" id="com.ti.ccstudio.buildDefinitions.TMS470.Debug.383605736" name="Debug" parent="com.ti.ccstudio.buildDefinitions.TMS470.Debug" postbuildStep="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/scripts/ImageCreator/out2rprc/out2rprc.exe xwr68xx_mmw_demo_hcc_mss.xer4f xwr68xx_mmw_demo_hcc_mss.tmp;         ${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/scripts/ImageCreator/multicore_image_generator/MulticoreImageGen.exe LE 37 0x00000006 xwr68xx_mmw_demo_hcc.bin 0x35510000 xwr68xx_mmw_demo_hcc_mss.tmp 0xb5510000 ${COM_TI_MMWAVE_SDK_INSTALL_DIR}/firmware/radarss/xwr6xxx_radarss_rprc.bin 0xd5510000 ${WORKSPACE_LOC}/mmwave_sdk_68xx_hcc_dss/Debug/xwr68xx_mmw_demo_hcc_dss.bin;         ${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/scripts/ImageCreator/crc_multicore_image/crc_multicore_image.exe xwr68xx_mmw_demo_hcc.bin xwr68xx_mmw_demo_hcc.tmp;         ${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/scripts/ImageCreator/append_bin_crc/gen_bincrc32.exe xwr68xx_mmw_demo_hcc.bin;" prebuildStep="rm -f ${PROJECT_ROOT}/xwr68xx_mmw_demo_hcc.bin;">
+					<folderInfo id="com.ti.ccstudio.buildDefinitions.TMS470.Debug.383605736." name="/" resourcePath="">
+						<toolChain id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.exe.DebugToolchain.1328668371" name="TI Build Tools" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.exe.DebugToolchain" targetTool="com.ti.ccstudio.buildDefinitions.TMS470_16.9.exe.linkerDebug.1932264352">
+							<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.ti.ccstudio.buildDefinitions.core.OPT_TAGS.1945712901" superClass="com.ti.ccstudio.buildDefinitions.core.OPT_TAGS" valueType="stringList">
+								<listOptionValue builtIn="false" value="DEVICE_CONFIGURATION_ID=Cortex R.IWR6843"/>
+								<listOptionValue builtIn="false" value="DEVICE_ENDIANNESS=little"/>
+								<listOptionValue builtIn="false" value="OUTPUT_FORMAT=ELF"/>
+								<listOptionValue builtIn="false" value="CCS_MBS_VERSION=6.1.3"/>
+								<listOptionValue builtIn="false" value="RUNTIME_SUPPORT_LIBRARY=libc.a"/>
+								<listOptionValue builtIn="false" value="RTSC_MBS_VERSION=7.0.0"/>
+								<listOptionValue builtIn="false" value="XDC_VERSION=3.50.8.24_core"/>
+								<listOptionValue builtIn="false" value="OUTPUT_TYPE=rtscApplication:executable"/>
+								<listOptionValue builtIn="false" value="PRODUCTS=com.ti.rtsc.SYSBIOS:6.73.1.01;com.ti.MMWAVE_SDK:3.5.0.04;"/>
+								<listOptionValue builtIn="false" value="PRODUCT_MACRO_IMPORTS={&quot;com.ti.rtsc.SYSBIOS&quot;:[&quot;${COM_TI_BIOS_INCLUDE_PATH}&quot;,&quot;${COM_TI_BIOS_LIBRARY_PATH}&quot;,&quot;${COM_TI_BIOS_LIBRARIES}&quot;,&quot;${COM_TI_BIOS_SYMBOLS}&quot;,&quot;${COM_TI_BIOS_SYSCONFIG_MANIFEST}&quot;],&quot;com.ti.MMWAVE_SDK&quot;:[&quot;${COM_TI_MMWAVE_SDK_INCLUDE_PATH}&quot;,&quot;${COM_TI_MMWAVE_SDK_LIBRARY_PATH}&quot;,&quot;${COM_TI_MMWAVE_SDK_LIBRARIES}&quot;,&quot;${COM_TI_MMWAVE_SDK_SYMBOLS}&quot;,&quot;${COM_TI_MMWAVE_SDK_SYSCONFIG_MANIFEST}&quot;]}"/>
+							</option>
+							<option id="com.ti.ccstudio.buildDefinitions.core.OPT_CODEGEN_VERSION.876260715" superClass="com.ti.ccstudio.buildDefinitions.core.OPT_CODEGEN_VERSION" value="16.9.6.LTS" valueType="string"/>
+							<targetPlatform id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.exe.targetPlatformDebug.589314006" name="Platform" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.exe.targetPlatformDebug"/>
+							<builder buildPath="${BuildDirectory}" id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.exe.builderDebug.1179038518" name="GNU Make.Debug" parallelBuildOn="true" parallelizationNumber="optimal" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.exe.builderDebug"/>
+							<tool id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.exe.compilerDebug.1038011949" name="Arm Compiler" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.exe.compilerDebug">
+								<option id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compilerID.CODE_STATE.757839849" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compilerID.CODE_STATE" useByScannerDiscovery="false" value="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compilerID.CODE_STATE.16" valueType="enumerated"/>
+								<option id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compilerID.SILICON_VERSION.770789071" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compilerID.SILICON_VERSION" useByScannerDiscovery="false" value="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compilerID.SILICON_VERSION.7R4" valueType="enumerated"/>
+								<option id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compilerID.FLOAT_SUPPORT.583645189" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compilerID.FLOAT_SUPPORT" useByScannerDiscovery="false" value="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compilerID.FLOAT_SUPPORT.VFPv3D16" valueType="enumerated"/>
+								<option id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compilerID.ABI.1143845844" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compilerID.ABI" useByScannerDiscovery="false" value="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compilerID.ABI.eabi" valueType="enumerated"/>
+								<option id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compilerID.ENUM_TYPE.1828600163" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compilerID.ENUM_TYPE" useByScannerDiscovery="false" value="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compilerID.ENUM_TYPE.int" valueType="enumerated"/>
+								<option id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compilerID.DEBUGGING_MODEL.1873316501" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compilerID.DEBUGGING_MODEL" useByScannerDiscovery="false" value="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compilerID.DEBUGGING_MODEL.SYMDEBUG__DWARF" valueType="enumerated"/>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compilerID.DIAG_WARNING.388096252" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compilerID.DIAG_WARNING" useByScannerDiscovery="false" valueType="stringList">
+									<listOptionValue builtIn="false" value="225"/>
+								</option>
+								<option id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compilerID.DISPLAY_ERROR_NUMBER.155692026" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compilerID.DISPLAY_ERROR_NUMBER" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+								<option id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compilerID.DIAG_WRAP.283999367" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compilerID.DIAG_WRAP" useByScannerDiscovery="false" value="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compilerID.DIAG_WRAP.off" valueType="enumerated"/>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compilerID.INCLUDE_PATH.963517453" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compilerID.INCLUDE_PATH" valueType="includePath">
+									<listOptionValue builtIn="false" value="${COM_TI_BIOS_INCLUDE_PATH}"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_INCLUDE_PATH}"/>
+									<listOptionValue builtIn="false" value="${PROJECT_ROOT}"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/demo/xwr68xx/mmw"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/demo/utils"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/datapath/dpc/objectdetection/objdetrangehwa"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/datapath/dpc/objectdetection/common"/>
+									<listOptionValue builtIn="false" value="${CG_TOOL_ROOT}/include"/>
+								</option>
+								<option id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compilerID.LITTLE_ENDIAN.859109464" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compilerID.LITTLE_ENDIAN" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compilerID.DEFINE.856455709" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compilerID.DEFINE" valueType="definedSymbols">
+									<listOptionValue builtIn="false" value="${COM_TI_BIOS_SYMBOLS}"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_SYMBOLS}"/>
+									<listOptionValue builtIn="false" value="${BIOS_SYMBOLS}"/>
+									<listOptionValue builtIn="false" value="SOC_XWR68XX"/>
+									<listOptionValue builtIn="false" value="SUBSYS_MSS"/>
+									<listOptionValue builtIn="false" value="DOWNLOAD_FROM_CCS"/>
+									<listOptionValue builtIn="false" value="MMWAVE_L3RAM_NUM_BANK=5"/>
+									<listOptionValue builtIn="false" value="MMWAVE_SHMEM_TCMA_NUM_BANK=0"/>
+									<listOptionValue builtIn="false" value="MMWAVE_SHMEM_TCMB_NUM_BANK=1"/>
+									<listOptionValue builtIn="false" value="MMWAVE_SHMEM_BANK_SIZE=0x20000"/>
+									<listOptionValue builtIn="false" value="DebugP_ASSERT_ENABLED"/>
+									<listOptionValue builtIn="false" value="_LITTLE_ENDIAN"/>
+									<listOptionValue builtIn="false" value="OBJDET_NO_RANGE"/>
+									<listOptionValue builtIn="false" value="APP_RESOURCE_FILE='&lt;'ti/demo/xwr68xx/mmw/mmw_res.h'&gt;'"/>
+								</option>
+								<option id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compilerID.OPT_LEVEL.536110989" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compilerID.OPT_LEVEL" useByScannerDiscovery="false" value="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compilerID.OPT_LEVEL.3" valueType="enumerated"/>
+								<option id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compilerID.OBJ_EXTENSION.1211691949" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compilerID.OBJ_EXTENSION" useByScannerDiscovery="false" value=".oer4f" valueType="string"/>
+								<option id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compilerID.GEN_FUNC_SUBSECTIONS.151364120" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compilerID.GEN_FUNC_SUBSECTIONS" useByScannerDiscovery="false" value="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compilerID.GEN_FUNC_SUBSECTIONS.on" valueType="enumerated"/>
+								<inputType id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compiler.inputType__C_SRCS.41925228" name="C Sources" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compiler.inputType__C_SRCS"/>
+								<inputType id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compiler.inputType__CPP_SRCS.75235961" name="C++ Sources" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compiler.inputType__CPP_SRCS"/>
+								<inputType id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compiler.inputType__ASM_SRCS.1140824289" name="Assembly Sources" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compiler.inputType__ASM_SRCS"/>
+								<inputType id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compiler.inputType__ASM2_SRCS.1362212895" name="Assembly Sources" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compiler.inputType__ASM2_SRCS"/>
+							</tool>
+							<tool id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.exe.linkerDebug.1932264352" name="Arm Linker" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.exe.linkerDebug">
+								<option id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.linkerID.ARM_BIG_ENDIAN_MODES.730016200" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.linkerID.ARM_BIG_ENDIAN_MODES" useByScannerDiscovery="false" value="com.ti.ccstudio.buildDefinitions.TMS470_16.9.linkerID.ARM_BIG_ENDIAN_MODES._none" valueType="enumerated"/>
+								<option id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.linkerID.HEAP_SIZE.818381426" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.linkerID.HEAP_SIZE" useByScannerDiscovery="false" value="0x800" valueType="string"/>
+								<option id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.linkerID.STACK_SIZE.1107195738" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.linkerID.STACK_SIZE" useByScannerDiscovery="false" value="0x800" valueType="string"/>
+								<option id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.linkerID.OUTPUT_FILE.504151345" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.linkerID.OUTPUT_FILE" useByScannerDiscovery="false" value="xwr68xx_mmw_demo_hcc_mss.xer4f" valueType="string"/>
+								<option id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.linkerID.MAP_FILE.1709066604" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.linkerID.MAP_FILE" useByScannerDiscovery="false" value="xwr68xx_mmw_demo_hcc_mss.map" valueType="string"/>
+								<option id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.linkerID.XML_LINK_INFO.1728092824" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.linkerID.XML_LINK_INFO" useByScannerDiscovery="false" value="xwr68xx_mmw_demo_mss_linkInfo.xml" valueType="string"/>
+								<option id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.linkerID.DISPLAY_ERROR_NUMBER.789749145" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.linkerID.DISPLAY_ERROR_NUMBER" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+								<option id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.linkerID.DIAG_WRAP.613672692" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.linkerID.DIAG_WRAP" useByScannerDiscovery="false" value="com.ti.ccstudio.buildDefinitions.TMS470_16.9.linkerID.DIAG_WRAP.off" valueType="enumerated"/>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.linkerID.SEARCH_PATH.1551959082" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.linkerID.SEARCH_PATH" valueType="libPaths">
+									<listOptionValue builtIn="false" value="${COM_TI_BIOS_LIBRARY_PATH}"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_LIBRARY_PATH}"/>
+									<listOptionValue builtIn="false" value="${CG_TOOL_ROOT}/lib"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/control/mmwave/lib"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/control/mmwavelink/lib"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/control/dpm/lib"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/drivers/adcbuf/lib"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/drivers/crc/lib"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/drivers/dma/lib"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/drivers/edma/lib"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/drivers/esm/lib"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/drivers/gpio/lib"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/drivers/hwa/lib"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/drivers/mailbox/lib"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/drivers/osal/lib"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/drivers/pinmux/lib"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/drivers/soc/lib"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/drivers/uart/lib"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/utils/cli/lib"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/utils/mathutils/lib"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/datapath/dpu/rangeproc/lib"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/datapath/dpedma/lib"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/drivers/cbuff/lib"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/utils/hsiheader/lib"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/drivers/qspi/lib"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/drivers/qspiflash/lib"/>
+									<listOptionValue builtIn="false" value="${CG_TOOL_ROOT}/include"/>
+								</option>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.linkerID.LIBRARY.1036746178" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.linkerID.LIBRARY" useByScannerDiscovery="false" valueType="libs">
+									<listOptionValue builtIn="false" value="${COM_TI_BIOS_LIBRARIES}"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_LIBRARIES}"/>
+									<listOptionValue builtIn="false" value="libosal_xwr68xx.aer4f"/>
+									<listOptionValue builtIn="false" value="libesm_xwr68xx.aer4f"/>
+									<listOptionValue builtIn="false" value="libgpio_xwr68xx.aer4f"/>
+									<listOptionValue builtIn="false" value="libsoc_xwr68xx.aer4f"/>
+									<listOptionValue builtIn="false" value="libpinmux_xwr68xx.aer4f"/>
+									<listOptionValue builtIn="false" value="libcrc_xwr68xx.aer4f"/>
+									<listOptionValue builtIn="false" value="libuart_xwr68xx.aer4f"/>
+									<listOptionValue builtIn="false" value="libmailbox_xwr68xx.aer4f"/>
+									<listOptionValue builtIn="false" value="libmmwavelink_xwr68xx.aer4f"/>
+									<listOptionValue builtIn="false" value="libmmwave_xwr68xx.aer4f"/>
+									<listOptionValue builtIn="false" value="libadcbuf_xwr68xx.aer4f"/>
+									<listOptionValue builtIn="false" value="libdma_xwr68xx.aer4f"/>
+									<listOptionValue builtIn="false" value="libedma_xwr68xx.aer4f"/>
+									<listOptionValue builtIn="false" value="libcli_xwr68xx.aer4f"/>
+									<listOptionValue builtIn="false" value="libhwa_xwr68xx.aer4f"/>
+									<listOptionValue builtIn="false" value="libdpm_xwr68xx.aer4f"/>
+									<listOptionValue builtIn="false" value="libmathutils.aer4f"/>
+									<listOptionValue builtIn="false" value="libcbuff_xwr68xx.aer4f"/>
+									<listOptionValue builtIn="false" value="libhsiheader_xwr68xx.aer4f"/>
+									<listOptionValue builtIn="false" value="librangeproc_hwa_xwr68xx.aer4f"/>
+									<listOptionValue builtIn="false" value="libdpedma_hwa_xwr68xx.aer4f"/>
+									<listOptionValue builtIn="false" value="libqspi_xwr68xx.aer4f"/>
+									<listOptionValue builtIn="false" value="libqspiflash_xwr68xx.aer4f"/>
+									<listOptionValue builtIn="false" value="rtsv7R4_T_le_v3D16_eabi.lib"/>
+									<listOptionValue builtIn="false" value="libc.a"/>
+								</option>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.linkerID.DEFINE.1756832144" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.linkerID.DEFINE" valueType="definedSymbols">
+									<listOptionValue builtIn="false" value="MMWAVE_L3RAM_NUM_BANK=6"/>
+									<listOptionValue builtIn="false" value="MMWAVE_SHMEM_TCMA_NUM_BANK=0"/>
+									<listOptionValue builtIn="false" value="MMWAVE_SHMEM_TCMB_NUM_BANK=0"/>
+									<listOptionValue builtIn="false" value="MMWAVE_SHMEM_BANK_SIZE=0x20000"/>
+								</option>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.linkerID.DIAG_WARNING.1624905161" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.linkerID.DIAG_WARNING" useByScannerDiscovery="false" valueType="stringList">
+									<listOptionValue builtIn="false" value="225"/>
+								</option>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.linkerID.DIAG_ERROR.1875736723" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.linkerID.DIAG_ERROR" useByScannerDiscovery="false" valueType="stringList">
+									<listOptionValue builtIn="false" value="10015"/>
+								</option>
+								<option id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.linkerID.UNUSED_SECTION_ELIMINATION.120712012" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.linkerID.UNUSED_SECTION_ELIMINATION" useByScannerDiscovery="false" value="com.ti.ccstudio.buildDefinitions.TMS470_16.9.linkerID.UNUSED_SECTION_ELIMINATION.on" valueType="enumerated"/>
+								<option id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.linkerID.DISABLE_AUTO_RTS.504953197" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.linkerID.DISABLE_AUTO_RTS" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+								<inputType id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.exeLinker.inputType__CMD_SRCS.1182485812" name="Linker Command Files" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.exeLinker.inputType__CMD_SRCS"/>
+								<inputType id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.exeLinker.inputType__CMD2_SRCS.858575930" name="Linker Command Files" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.exeLinker.inputType__CMD2_SRCS"/>
+								<inputType id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.exeLinker.inputType__GEN_CMDS.1357743743" name="Generated Linker Command Files" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.exeLinker.inputType__GEN_CMDS"/>
+							</tool>
+							<tool id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.hex.1378128114" name="Arm Hex Utility" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.hex"/>
+							<tool id="com.ti.rtsc.buildDefinitions.XDC_3.16.tool.883276656" name="XDCtools" superClass="com.ti.rtsc.buildDefinitions.XDC_3.16.tool">
+								<option id="com.ti.rtsc.buildDefinitions.XDC_3.16.tool.CODEGEN_TOOL_DIR.1412037047" superClass="com.ti.rtsc.buildDefinitions.XDC_3.16.tool.CODEGEN_TOOL_DIR" value="${CG_TOOL_ROOT}" valueType="string"/>
+								<option id="com.ti.rtsc.buildDefinitions.XDC_3.16.tool.TARGET.1030563836" superClass="com.ti.rtsc.buildDefinitions.XDC_3.16.tool.TARGET" value="ti.targets.arm.elf.R4Ft" valueType="string"/>
+								<option id="com.ti.rtsc.buildDefinitions.XDC_3.16.tool.PLATFORM.541863587" superClass="com.ti.rtsc.buildDefinitions.XDC_3.16.tool.PLATFORM" value="ti.platforms.cortexR:IWR68XX:false:200" valueType="string"/>
+								<option id="com.ti.rtsc.buildDefinitions.XDC_3.16.tool.PLATFORM_RAW.40405747" superClass="com.ti.rtsc.buildDefinitions.XDC_3.16.tool.PLATFORM_RAW" value="ti.platforms.cortexR:IWR68XX:false:200" valueType="string"/>
+								<option id="com.ti.rtsc.buildDefinitions.XDC_3.16.tool.BUILD_PROFILE.304940284" superClass="com.ti.rtsc.buildDefinitions.XDC_3.16.tool.BUILD_PROFILE" value="release" valueType="string"/>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.ti.rtsc.buildDefinitions.XDC_3.16.tool.XDC_PATH.1276068382" superClass="com.ti.rtsc.buildDefinitions.XDC_3.16.tool.XDC_PATH" valueType="stringList">
+									<listOptionValue builtIn="false" value="${BIOS_CG_ROOT}/packages"/>
+								</option>
+								<option id="com.ti.rtsc.buildDefinitions.XDC_3.16.tool.COMPILE_OPTIONS.2051392190" superClass="com.ti.rtsc.buildDefinitions.XDC_3.16.tool.COMPILE_OPTIONS" useByScannerDiscovery="false" value="&quot;--enum_type=int &quot;" valueType="string"/>
+							</tool>
+						</toolChain>
+					</folderInfo>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+		</cconfiguration>
+		<cconfiguration id="com.ti.ccstudio.buildDefinitions.TMS470.Release.477402886">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="com.ti.ccstudio.buildDefinitions.TMS470.Release.477402886" moduleId="org.eclipse.cdt.core.settings" name="Release">
+				<externalSettings/>
+				<extensions>
+					<extension id="com.ti.ccstudio.binaryparser.CoffParser" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="com.ti.ccstudio.errorparser.CoffErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.rtsc.xdctools.parsers.ErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="com.ti.ccstudio.errorparser.AsmErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="com.ti.ccstudio.errorparser.LinkErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactExtension="xer4f" artifactName="xwr68xx_mmw_demo_hcc_mss" buildProperties="" cleanCommand="${CG_CLEAN_CMD}" description="" errorParsers="org.eclipse.rtsc.xdctools.parsers.ErrorParser;org.eclipse.cdt.core.GmakeErrorParser;com.ti.ccstudio.errorparser.CoffErrorParser;com.ti.ccstudio.errorparser.AsmErrorParser;com.ti.ccstudio.errorparser.LinkErrorParser" id="com.ti.ccstudio.buildDefinitions.TMS470.Release.477402886" name="Release" parent="com.ti.ccstudio.buildDefinitions.TMS470.Release" postbuildStep="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/scripts/ImageCreator/out2rprc/out2rprc.exe xwr68xx_mmw_demo_hcc_mss.xer4f xwr68xx_mmw_demo_hcc_mss.tmp;         ${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/scripts/ImageCreator/multicore_image_generator/MulticoreImageGen.exe LE 37 0x00000006 xwr68xx_mmw_demo_hcc.bin 0x35510000 xwr68xx_mmw_demo_hcc_mss.tmp 0xb5510000 ${COM_TI_MMWAVE_SDK_INSTALL_DIR}/firmware/radarss/xwr6xxx_radarss_rprc.bin 0xd5510000 ${WORKSPACE_LOC}/mmwave_sdk_68xx_hcc_dss/Debug/xwr68xx_mmw_demo_hcc_dss.bin;         ${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/scripts/ImageCreator/crc_multicore_image/crc_multicore_image.exe xwr68xx_mmw_demo_hcc.bin xwr68xx_mmw_demo_hcc.tmp;         ${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/scripts/ImageCreator/append_bin_crc/gen_bincrc32.exe xwr68xx_mmw_demo_hcc.bin;" prebuildStep="rm -f ${PROJECT_ROOT}/xwr68xx_mmw_demo_hcc.bin;">
+					<folderInfo id="com.ti.ccstudio.buildDefinitions.TMS470.Release.477402886." name="/" resourcePath="">
+						<toolChain id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.exe.ReleaseToolchain.1483225889" name="TI Build Tools" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.exe.ReleaseToolchain" targetTool="com.ti.ccstudio.buildDefinitions.TMS470_16.9.exe.linkerRelease.1557209909">
+							<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.ti.ccstudio.buildDefinitions.core.OPT_TAGS.1040920470" superClass="com.ti.ccstudio.buildDefinitions.core.OPT_TAGS" valueType="stringList">
+								<listOptionValue builtIn="false" value="DEVICE_CONFIGURATION_ID=Cortex R.IWR6843"/>
+								<listOptionValue builtIn="false" value="DEVICE_ENDIANNESS=little"/>
+								<listOptionValue builtIn="false" value="OUTPUT_FORMAT=ELF"/>
+								<listOptionValue builtIn="false" value="CCS_MBS_VERSION=6.1.3"/>
+								<listOptionValue builtIn="false" value="RUNTIME_SUPPORT_LIBRARY=libc.a"/>
+								<listOptionValue builtIn="false" value="RTSC_MBS_VERSION=7.0.0"/>
+								<listOptionValue builtIn="false" value="XDC_VERSION=3.50.8.24_core"/>
+								<listOptionValue builtIn="false" value="OUTPUT_TYPE=rtscApplication:executable"/>
+								<listOptionValue builtIn="false" value="PRODUCTS=com.ti.rtsc.SYSBIOS:6.73.1.01;com.ti.MMWAVE_SDK:3.5.0.04;"/>
+								<listOptionValue builtIn="false" value="PRODUCT_MACRO_IMPORTS={&quot;com.ti.rtsc.SYSBIOS&quot;:[&quot;${COM_TI_BIOS_INCLUDE_PATH}&quot;,&quot;${COM_TI_BIOS_LIBRARY_PATH}&quot;,&quot;${COM_TI_BIOS_LIBRARIES}&quot;,&quot;${COM_TI_BIOS_SYMBOLS}&quot;,&quot;${COM_TI_BIOS_SYSCONFIG_MANIFEST}&quot;],&quot;com.ti.MMWAVE_SDK&quot;:[&quot;${COM_TI_MMWAVE_SDK_INCLUDE_PATH}&quot;,&quot;${COM_TI_MMWAVE_SDK_LIBRARY_PATH}&quot;,&quot;${COM_TI_MMWAVE_SDK_LIBRARIES}&quot;,&quot;${COM_TI_MMWAVE_SDK_SYMBOLS}&quot;,&quot;${COM_TI_MMWAVE_SDK_SYSCONFIG_MANIFEST}&quot;]}"/>
+							</option>
+							<option id="com.ti.ccstudio.buildDefinitions.core.OPT_CODEGEN_VERSION.1453449238" superClass="com.ti.ccstudio.buildDefinitions.core.OPT_CODEGEN_VERSION" value="16.9.6.LTS" valueType="string"/>
+							<targetPlatform id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.exe.targetPlatformRelease.793787869" name="Platform" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.exe.targetPlatformRelease"/>
+							<builder buildPath="${BuildDirectory}" id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.exe.builderRelease.391701344" name="GNU Make.Release" parallelBuildOn="true" parallelizationNumber="optimal" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.exe.builderRelease"/>
+							<tool id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.exe.compilerRelease.1518758813" name="Arm Compiler" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.exe.compilerRelease">
+								<option id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compilerID.CODE_STATE.2059733874" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compilerID.CODE_STATE" useByScannerDiscovery="false" value="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compilerID.CODE_STATE.16" valueType="enumerated"/>
+								<option id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compilerID.SILICON_VERSION.2016929557" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compilerID.SILICON_VERSION" useByScannerDiscovery="false" value="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compilerID.SILICON_VERSION.7R4" valueType="enumerated"/>
+								<option id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compilerID.FLOAT_SUPPORT.552139590" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compilerID.FLOAT_SUPPORT" useByScannerDiscovery="false" value="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compilerID.FLOAT_SUPPORT.VFPv3D16" valueType="enumerated"/>
+								<option id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compilerID.ABI.66882401" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compilerID.ABI" useByScannerDiscovery="false" value="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compilerID.ABI.eabi" valueType="enumerated"/>
+								<option id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compilerID.ENUM_TYPE.1103238909" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compilerID.ENUM_TYPE" useByScannerDiscovery="false" value="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compilerID.ENUM_TYPE.int" valueType="enumerated"/>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compilerID.DIAG_WARNING.705616955" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compilerID.DIAG_WARNING" useByScannerDiscovery="false" valueType="stringList">
+									<listOptionValue builtIn="false" value="225"/>
+								</option>
+								<option id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compilerID.DISPLAY_ERROR_NUMBER.1054834061" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compilerID.DISPLAY_ERROR_NUMBER" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+								<option id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compilerID.DIAG_WRAP.1408897269" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compilerID.DIAG_WRAP" useByScannerDiscovery="false" value="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compilerID.DIAG_WRAP.off" valueType="enumerated"/>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compilerID.INCLUDE_PATH.721581547" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compilerID.INCLUDE_PATH" valueType="includePath">
+									<listOptionValue builtIn="false" value="${COM_TI_BIOS_INCLUDE_PATH}"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_INCLUDE_PATH}"/>
+									<listOptionValue builtIn="false" value="${PROJECT_ROOT}"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/demo/xwr68xx/mmw"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/demo/utils"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/datapath/dpc/objectdetection/objdetrangehwa"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/datapath/dpc/objectdetection/common"/>
+									<listOptionValue builtIn="false" value="${CG_TOOL_ROOT}/include"/>
+								</option>
+								<option id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compilerID.LITTLE_ENDIAN.1632881831" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compilerID.LITTLE_ENDIAN" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compilerID.DEFINE.786266292" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compilerID.DEFINE" valueType="definedSymbols">
+									<listOptionValue builtIn="false" value="${COM_TI_BIOS_SYMBOLS}"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_SYMBOLS}"/>
+									<listOptionValue builtIn="false" value="${BIOS_SYMBOLS}"/>
+									<listOptionValue builtIn="false" value="SOC_XWR68XX"/>
+									<listOptionValue builtIn="false" value="SUBSYS_MSS"/>
+									<listOptionValue builtIn="false" value="DOWNLOAD_FROM_CCS"/>
+									<listOptionValue builtIn="false" value="MMWAVE_L3RAM_NUM_BANK=5"/>
+									<listOptionValue builtIn="false" value="MMWAVE_SHMEM_TCMA_NUM_BANK=0"/>
+									<listOptionValue builtIn="false" value="MMWAVE_SHMEM_TCMB_NUM_BANK=1"/>
+									<listOptionValue builtIn="false" value="MMWAVE_SHMEM_BANK_SIZE=0x20000"/>
+									<listOptionValue builtIn="false" value="DebugP_ASSERT_ENABLED"/>
+									<listOptionValue builtIn="false" value="_LITTLE_ENDIAN"/>
+									<listOptionValue builtIn="false" value="OBJDET_NO_RANGE"/>
+									<listOptionValue builtIn="false" value="APP_RESOURCE_FILE='&lt;'ti/demo/xwr68xx/mmw/mmw_res.h'&gt;'"/>
+								</option>
+								<option id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compilerID.OPT_LEVEL.release.868720719" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compilerID.OPT_LEVEL.release" useByScannerDiscovery="false" value="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compilerID.OPT_LEVEL.3" valueType="enumerated"/>
+								<option id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compilerID.OBJ_EXTENSION.1366167282" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compilerID.OBJ_EXTENSION" useByScannerDiscovery="false" value=".oer4f" valueType="string"/>
+								<option id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compilerID.DEBUGGING_MODEL.1490427210" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compilerID.DEBUGGING_MODEL" useByScannerDiscovery="false" value="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compilerID.DEBUGGING_MODEL.SYMDEBUG__DWARF" valueType="enumerated"/>
+								<option id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compilerID.GEN_FUNC_SUBSECTIONS.393907958" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compilerID.GEN_FUNC_SUBSECTIONS" useByScannerDiscovery="false" value="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compilerID.GEN_FUNC_SUBSECTIONS.on" valueType="enumerated"/>
+								<inputType id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compiler.inputType__C_SRCS.495347174" name="C Sources" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compiler.inputType__C_SRCS"/>
+								<inputType id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compiler.inputType__CPP_SRCS.672891454" name="C++ Sources" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compiler.inputType__CPP_SRCS"/>
+								<inputType id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compiler.inputType__ASM_SRCS.1405496944" name="Assembly Sources" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compiler.inputType__ASM_SRCS"/>
+								<inputType id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compiler.inputType__ASM2_SRCS.1083874713" name="Assembly Sources" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.compiler.inputType__ASM2_SRCS"/>
+							</tool>
+							<tool id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.exe.linkerRelease.1557209909" name="Arm Linker" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.exe.linkerRelease">
+								<option id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.linkerID.ARM_BIG_ENDIAN_MODES.1459552394" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.linkerID.ARM_BIG_ENDIAN_MODES" useByScannerDiscovery="false" value="com.ti.ccstudio.buildDefinitions.TMS470_16.9.linkerID.ARM_BIG_ENDIAN_MODES._none" valueType="enumerated"/>
+								<option id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.linkerID.HEAP_SIZE.781709517" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.linkerID.HEAP_SIZE" useByScannerDiscovery="false" value="0x800" valueType="string"/>
+								<option id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.linkerID.STACK_SIZE.385114695" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.linkerID.STACK_SIZE" useByScannerDiscovery="false" value="0x800" valueType="string"/>
+								<option id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.linkerID.OUTPUT_FILE.1196547573" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.linkerID.OUTPUT_FILE" useByScannerDiscovery="false" value="xwr68xx_mmw_demo_hcc_mss.xer4f" valueType="string"/>
+								<option id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.linkerID.MAP_FILE.216306246" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.linkerID.MAP_FILE" useByScannerDiscovery="false" value="xwr68xx_mmw_demo_hcc_mss.map" valueType="string"/>
+								<option id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.linkerID.XML_LINK_INFO.246212452" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.linkerID.XML_LINK_INFO" useByScannerDiscovery="false" value="xwr68xx_mmw_demo_mss_linkInfo.xml" valueType="string"/>
+								<option id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.linkerID.DISPLAY_ERROR_NUMBER.574600713" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.linkerID.DISPLAY_ERROR_NUMBER" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+								<option id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.linkerID.DIAG_WRAP.1905963819" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.linkerID.DIAG_WRAP" useByScannerDiscovery="false" value="com.ti.ccstudio.buildDefinitions.TMS470_16.9.linkerID.DIAG_WRAP.off" valueType="enumerated"/>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.linkerID.SEARCH_PATH.1595063564" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.linkerID.SEARCH_PATH" valueType="libPaths">
+									<listOptionValue builtIn="false" value="${COM_TI_BIOS_LIBRARY_PATH}"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_LIBRARY_PATH}"/>
+									<listOptionValue builtIn="false" value="${CG_TOOL_ROOT}/lib"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/control/mmwave/lib"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/control/mmwavelink/lib"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/control/dpm/lib"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/drivers/adcbuf/lib"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/drivers/crc/lib"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/drivers/dma/lib"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/drivers/edma/lib"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/drivers/esm/lib"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/drivers/gpio/lib"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/drivers/hwa/lib"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/drivers/mailbox/lib"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/drivers/osal/lib"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/drivers/pinmux/lib"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/drivers/soc/lib"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/drivers/uart/lib"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/utils/cli/lib"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/utils/mathutils/lib"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/datapath/dpu/rangeproc/lib"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/datapath/dpedma/lib"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/drivers/cbuff/lib"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/utils/hsiheader/lib"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/drivers/qspi/lib"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/drivers/qspiflash/lib"/>
+									<listOptionValue builtIn="false" value="${CG_TOOL_ROOT}/include"/>
+								</option>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.linkerID.LIBRARY.1847666664" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.linkerID.LIBRARY" useByScannerDiscovery="false" valueType="libs">
+									<listOptionValue builtIn="false" value="${COM_TI_BIOS_LIBRARIES}"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_LIBRARIES}"/>
+									<listOptionValue builtIn="false" value="libosal_xwr68xx.aer4f"/>
+									<listOptionValue builtIn="false" value="libesm_xwr68xx.aer4f"/>
+									<listOptionValue builtIn="false" value="libgpio_xwr68xx.aer4f"/>
+									<listOptionValue builtIn="false" value="libsoc_xwr68xx.aer4f"/>
+									<listOptionValue builtIn="false" value="libpinmux_xwr68xx.aer4f"/>
+									<listOptionValue builtIn="false" value="libcrc_xwr68xx.aer4f"/>
+									<listOptionValue builtIn="false" value="libuart_xwr68xx.aer4f"/>
+									<listOptionValue builtIn="false" value="libmailbox_xwr68xx.aer4f"/>
+									<listOptionValue builtIn="false" value="libmmwavelink_xwr68xx.aer4f"/>
+									<listOptionValue builtIn="false" value="libmmwave_xwr68xx.aer4f"/>
+									<listOptionValue builtIn="false" value="libadcbuf_xwr68xx.aer4f"/>
+									<listOptionValue builtIn="false" value="libdma_xwr68xx.aer4f"/>
+									<listOptionValue builtIn="false" value="libedma_xwr68xx.aer4f"/>
+									<listOptionValue builtIn="false" value="libcli_xwr68xx.aer4f"/>
+									<listOptionValue builtIn="false" value="libhwa_xwr68xx.aer4f"/>
+									<listOptionValue builtIn="false" value="libdpm_xwr68xx.aer4f"/>
+									<listOptionValue builtIn="false" value="libmathutils.aer4f"/>
+									<listOptionValue builtIn="false" value="libcbuff_xwr68xx.aer4f"/>
+									<listOptionValue builtIn="false" value="libhsiheader_xwr68xx.aer4f"/>
+									<listOptionValue builtIn="false" value="librangeproc_hwa_xwr68xx.aer4f"/>
+									<listOptionValue builtIn="false" value="libdpedma_hwa_xwr68xx.aer4f"/>
+									<listOptionValue builtIn="false" value="libqspi_xwr68xx.aer4f"/>
+									<listOptionValue builtIn="false" value="libqspiflash_xwr68xx.aer4f"/>
+									<listOptionValue builtIn="false" value="rtsv7R4_T_le_v3D16_eabi.lib"/>
+									<listOptionValue builtIn="false" value="libc.a"/>
+								</option>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.linkerID.DEFINE.949163950" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.linkerID.DEFINE" valueType="definedSymbols">
+									<listOptionValue builtIn="false" value="MMWAVE_L3RAM_NUM_BANK=6"/>
+									<listOptionValue builtIn="false" value="MMWAVE_SHMEM_TCMA_NUM_BANK=0"/>
+									<listOptionValue builtIn="false" value="MMWAVE_SHMEM_TCMB_NUM_BANK=0"/>
+									<listOptionValue builtIn="false" value="MMWAVE_SHMEM_BANK_SIZE=0x20000"/>
+								</option>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.linkerID.DIAG_WARNING.1378020338" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.linkerID.DIAG_WARNING" useByScannerDiscovery="false" valueType="stringList">
+									<listOptionValue builtIn="false" value="225"/>
+								</option>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.linkerID.DIAG_ERROR.1570571977" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.linkerID.DIAG_ERROR" useByScannerDiscovery="false" valueType="stringList">
+									<listOptionValue builtIn="false" value="10015"/>
+								</option>
+								<option id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.linkerID.UNUSED_SECTION_ELIMINATION.1665602450" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.linkerID.UNUSED_SECTION_ELIMINATION" useByScannerDiscovery="false" value="com.ti.ccstudio.buildDefinitions.TMS470_16.9.linkerID.UNUSED_SECTION_ELIMINATION.on" valueType="enumerated"/>
+								<option id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.linkerID.DISABLE_AUTO_RTS.465683596" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.linkerID.DISABLE_AUTO_RTS" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+								<inputType id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.exeLinker.inputType__CMD_SRCS.616770396" name="Linker Command Files" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.exeLinker.inputType__CMD_SRCS"/>
+								<inputType id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.exeLinker.inputType__CMD2_SRCS.25468014" name="Linker Command Files" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.exeLinker.inputType__CMD2_SRCS"/>
+								<inputType id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.exeLinker.inputType__GEN_CMDS.573308305" name="Generated Linker Command Files" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.exeLinker.inputType__GEN_CMDS"/>
+							</tool>
+							<tool id="com.ti.ccstudio.buildDefinitions.TMS470_16.9.hex.66637870" name="Arm Hex Utility" superClass="com.ti.ccstudio.buildDefinitions.TMS470_16.9.hex"/>
+							<tool id="com.ti.rtsc.buildDefinitions.XDC_3.16.tool.346578012" name="XDCtools" superClass="com.ti.rtsc.buildDefinitions.XDC_3.16.tool">
+								<option id="com.ti.rtsc.buildDefinitions.XDC_3.16.tool.CODEGEN_TOOL_DIR.1526266486" superClass="com.ti.rtsc.buildDefinitions.XDC_3.16.tool.CODEGEN_TOOL_DIR" value="${CG_TOOL_ROOT}" valueType="string"/>
+								<option id="com.ti.rtsc.buildDefinitions.XDC_3.16.tool.TARGET.1139091492" superClass="com.ti.rtsc.buildDefinitions.XDC_3.16.tool.TARGET" value="ti.targets.arm.elf.R4Ft" valueType="string"/>
+								<option id="com.ti.rtsc.buildDefinitions.XDC_3.16.tool.PLATFORM.967712545" superClass="com.ti.rtsc.buildDefinitions.XDC_3.16.tool.PLATFORM" value="ti.platforms.cortexR:IWR68XX:false:200" valueType="string"/>
+								<option id="com.ti.rtsc.buildDefinitions.XDC_3.16.tool.PLATFORM_RAW.2000210734" superClass="com.ti.rtsc.buildDefinitions.XDC_3.16.tool.PLATFORM_RAW" value="ti.platforms.cortexR:IWR68XX:false:200" valueType="string"/>
+								<option id="com.ti.rtsc.buildDefinitions.XDC_3.16.tool.BUILD_PROFILE.983103465" superClass="com.ti.rtsc.buildDefinitions.XDC_3.16.tool.BUILD_PROFILE" value="release" valueType="string"/>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.ti.rtsc.buildDefinitions.XDC_3.16.tool.XDC_PATH.64986222" superClass="com.ti.rtsc.buildDefinitions.XDC_3.16.tool.XDC_PATH" valueType="stringList">
+									<listOptionValue builtIn="false" value="${BIOS_CG_ROOT}/packages"/>
+								</option>
+								<option id="com.ti.rtsc.buildDefinitions.XDC_3.16.tool.COMPILE_OPTIONS.529520159" superClass="com.ti.rtsc.buildDefinitions.XDC_3.16.tool.COMPILE_OPTIONS" useByScannerDiscovery="false" value="&quot;--enum_type=int &quot;" valueType="string"/>
+							</tool>
+						</toolChain>
+					</folderInfo>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+		</cconfiguration>
+	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
+	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+		<project id="mmwave_sdk_68xx_hcc_mss.com.ti.ccstudio.buildDefinitions.TMS470.ProjectType.1947128605" name="TMS470" projectType="com.ti.ccstudio.buildDefinitions.TMS470.ProjectType"/>
+	</storageModule>
+	<storageModule moduleId="scannerConfiguration"/>
+</cproject>
