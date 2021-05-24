@@ -108,9 +108,9 @@
 #define NUM_PROFILES                        (2U) /* one for MRR80, one for USRR20 */
 
 /**! @brief The multi-mode Radar mode of operation. */
-#define SUBFRAME_CONF_MRR_USRR                   /* Two subframes, MRR followed by USRR20. */
+// #define SUBFRAME_CONF_MRR_USRR                   /* Two subframes, MRR followed by USRR20. */
 /**! @brief The USRR only mode of operation. */
-//#define SUBFRAME_CONF_USRR                   /* One subframe USRR20. */
+#define SUBFRAME_CONF_USRR                   /* One subframe USRR20. */
 /**! @brief The MRR only mode of operation. */
 // #define SUBFRAME_CONF_MRR                   /* One subframe MRR80. */
 
@@ -160,9 +160,9 @@
     #include "mrr_config_chirp_design_MRR80.h"
 #endif
 /*! @brief Add in the USRR 20 chirp design. */
-//#include "mrr_config_chirp_design_USRR20.h"
+#include "mrr_config_chirp_design_USRR20.h"
 /*! @brief Add in the USRR 30 chirp design. */
-#include "mrr_config_chirp_design_USRR30.h"
+// #include "mrr_config_chirp_design_USRR30.h"
 
 #if NUM_SUBFRAMES == 2
     #ifdef SUBFRAME_CONF_MRR_USRR
