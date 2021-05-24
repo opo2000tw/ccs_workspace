@@ -95,15 +95,18 @@
 /**************************************************************************
  *************************** Global Definitions ***************************
  **************************************************************************/
+#if 0
 volatile uint32_t       gTxDoneFlag = 0, gRxDoneFlag = 0, gParityErrFlag = 0;
 volatile uint32_t       gTxPkts = 0, gRxPkts = 0, gErrStatusInt = 0;
 volatile uint32_t                iterationCount = 0U;
 uint32_t                dataLength = 0U;
 uint32_t                msgLstErrCnt = 0U;
 uint32_t                gDisplayStats = 0;
+#endif
 
 uint8_t                 rxData[64U];
 uint32_t                txDataLength, rxDataLength;
+#if 0
 CANFD_MCANFrameType     frameType = CANFD_MCANFrameType_FD;
 //CANFD_MCANFrameType     frameType = CANFD_MCANFrameType_CLASSIC;
 
@@ -184,7 +187,7 @@ CANFD_Handle                canHandle;
 CANFD_MsgObjHandle          txMsgObjHandle;
 
 CANFD_MCANMsgObjCfgParams   txMsgObjectParams;
-
+#endif
 
 
 /**
@@ -207,7 +210,7 @@ static void MRR_MSS_initTask (UArg arg0, UArg arg1);
 static void MRR_MSS_mmWaveCtrlTask (UArg arg0, UArg arg1);
 
 
-
+#if 0
 /**
  * @brief
  *  Global Variable for tracking information required by the mmw Demo
@@ -396,7 +399,6 @@ static void MCANAppCallback(CANFD_MsgObjHandle handle, CANFD_Reason reason)
 
 }
 
-
 static void MCANAppInitParams(CANFD_MCANInitParams* mcanCfgParams)
 {
     /*Intialize MCAN Config Params*/
@@ -452,7 +454,6 @@ static void MCANAppInitParams(CANFD_MCANInitParams* mcanCfgParams)
     mcanCfgParams->appErrCallBack       = MCANAppErrStatusCallback;
     mcanCfgParams->appDataCallBack      = MCANAppCallback;
 }
-
 
 void Can_Initialize(void)
 {
@@ -586,7 +587,7 @@ void Can_Initialize(void)
 
 
 }
-
+#endif
 
 /**************************************************************************
  ********************** MSS MRR TI Design Functions ***********************
@@ -908,29 +909,34 @@ static void MmwDemo_mboxReadTask(UArg arg0, UArg arg1)
                         UART_writePolling (gMrrMSSMCB.loggingUartHandle,
                                            (uint8_t*)&message.body.detObj.header,
                                            sizeof(MmwDemo_output_message_header));
+                                           #if 0
                         txMsgObjectParams.msgIdentifier = Get_CanMessageIdentifier((MmwDemo_output_message_type)MMWDEMO_HEADER);
                         Can_Transmit_Schedule( txMsgObjectParams.msgIdentifier,
                                                 (uint8_t*)&message.body.detObj.header,sizeof(MmwDemo_output_message_header));
+                        #endif
                         /* Send TLVs */
                         for (itemIdx = 0;  itemIdx < message.body.detObj.header.numTLVs; itemIdx++)
                         {
                             UART_writePolling (gMrrMSSMCB.loggingUartHandle,
                                                (uint8_t*)&message.body.detObj.tlv[itemIdx],
                                                sizeof(MmwDemo_output_message_tl));
+                                               #if 0
                             txMsgObjectParams.msgIdentifier = Get_CanMessageIdentifier((MmwDemo_output_message_type)message.body.detObj.tlv[itemIdx].type);
-
+                            
                             Can_Transmit_Schedule(txMsgObjectParams.msgIdentifier,
                             (uint8_t*)&message.body.detObj.tlv[itemIdx],sizeof(MmwDemo_output_message_tl));
-
+                            #endif
 
                             UART_writePolling (gMrrMSSMCB.loggingUartHandle,
                                                (uint8_t*)SOC_translateAddress(message.body.detObj.tlv[itemIdx].address, SOC_TranslateAddr_Dir_FROM_OTHER_CPU,NULL),
                                                message.body.detObj.tlv[itemIdx].length);
+                                               #if 0
                             txMsgObjectParams.msgIdentifier = Get_CanMessageIdentifier((MmwDemo_output_message_type)message.body.detObj.tlv[itemIdx].type);
-
+                            
                             Can_Transmit_Schedule( txMsgObjectParams.msgIdentifier,
                             (uint8_t*)SOC_translateAddress(message.body.detObj.tlv[itemIdx].address,SOC_TranslateAddr_Dir_FROM_OTHER_CPU,NULL),
                                                                        message.body.detObj.tlv[itemIdx].length);
+                            #endif
 
                             totalPacketLen += sizeof(MmwDemo_output_message_tl) + message.body.detObj.tlv[itemIdx].length;
                         }
@@ -941,11 +947,12 @@ static void MmwDemo_mboxReadTask(UArg arg0, UArg arg1)
                         {
                             uint8_t padding[MMWDEMO_OUTPUT_MSG_SEGMENT_LEN];
                             /*DEBUG:*/ memset(&padding, 0xf, MMWDEMO_OUTPUT_MSG_SEGMENT_LEN);
-                            txMsgObjectParams.msgIdentifier = Get_CanMessageIdentifier((MmwDemo_output_message_type)MMWDEMO_PADDING);
-
                             UART_writePolling (gMrrMSSMCB.loggingUartHandle, padding, numPaddingBytes);
+                            #if 0
+                            txMsgObjectParams.msgIdentifier = Get_CanMessageIdentifier((MmwDemo_output_message_type)MMWDEMO_PADDING);
                             Can_Transmit_Schedule( txMsgObjectParams.msgIdentifier,
                                                            padding,numPaddingBytes);
+                            #endif
                         }
                     }
                     /* Send a message to MSS to log the output data */
@@ -1032,6 +1039,7 @@ static void MRR_MSS_mmWaveCtrlTask (UArg arg0, UArg arg1)
     }
 }
 
+#if 0
 /**
  *  @b Description
  *  @n
@@ -1113,7 +1121,7 @@ void MRR_MSS_mssProcessDataPathTask(UArg arg0, UArg arg1)
 
     System_printf("Debug: MMWDemoDSS Data path exit\n");
 }
-
+#endif
 
 /**
  *  @b Description
@@ -1162,9 +1170,10 @@ static void MRR_MSS_initTask (UArg arg0, UArg arg1)
 
     /* Initialize the UART */
     UART_init();
-
+#if 0
     /*Initialze the CAN interface */
     Can_Initialize();
+#endif
 
     /* Initialize the GPIO */
     GPIO_init();
@@ -1399,6 +1408,7 @@ int32_t main (void)
     return 0;
 }
 
+#if 0
 #ifdef USE_LVDS_INTERFACE_FOR_OBJECT_DATA_TX
 
 /**
@@ -1715,4 +1725,5 @@ static void MRR_MSS_edmaTransferControllerErrorCallbackFxn
     /* EDMA TC Error reported, Assert ? */
     DebugP_assert(0);
 }
+#endif
 #endif
