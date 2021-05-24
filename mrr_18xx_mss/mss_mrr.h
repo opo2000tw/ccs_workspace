@@ -256,7 +256,7 @@ typedef struct Mrr_MSS_MCB_t
      * @brief   This is a flag which indicates if the mmWave link has been configured
      * or not.
      */
-    bool                        cfgStatus;
+    bool                        isMMWaveOpen;
     
     /**
      * @brief   This is a flag which indicates if the radar is tranmsitting or not
@@ -267,7 +267,7 @@ typedef struct Mrr_MSS_MCB_t
     /**
      * @brief   This is a flag which indicates if the basic radar configuration is completed.
      */
-    bool                        isMMWaveOpen;
+    bool                        cfgStatus;
 
     /*! @brief   mmw Demo stats */
     MmwDemo_MSS_STATS           stats;
@@ -278,20 +278,6 @@ typedef struct Mrr_MSS_MCB_t
  * Extern Global Structures:
  *******************************************************************************************/
 extern Mrr_MSS_MCB gMrrMSSMCB;
-
-/*******************************************************************************************
- * Extern IPC API:
- *******************************************************************************************/
-extern int32_t IPC_init (Mailbox_Type remoteEndPoint);
-extern int32_t IPC_sendChannelCfg (rlChanCfg_t* ptrChannelCfg);
-extern int32_t IPC_sendLowPowerModeCfg (rlLowPowerModeCfg_t* ptrLowPowerMode);
-extern int32_t IPC_sendADCOutCfg (rlAdcOutCfg_t* ptrADCOutCfg);
-extern int32_t IPC_sendProfileCfg (rlProfileCfg_t* ptrProfileCfg);
-extern int32_t IPC_sendChirpCfg (rlChirpCfg_t* ptrChirpCfg);
-extern int32_t IPC_sendFrameCfg (rlFrameCfg_t* ptrFrameCfg);
-extern int32_t IPC_sendAdvFrameCfg (rlAdvFrameCfg_t* ptrAdvFrameCfg);
-extern int32_t IPC_sendSensorStart (void);
-extern int32_t IPC_sendSensorStop (void);
 
 /*******************************************************************************************
  * Extern CLI API:
