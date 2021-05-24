@@ -76,7 +76,6 @@
 			"mrr_18xx_mss": true,
 			"**/mrr_18xx_dss": true,
 			"mrr_18xx_dss": true
-		},
-		"explorerExclude.backup": null
+		}
 	}
 }
