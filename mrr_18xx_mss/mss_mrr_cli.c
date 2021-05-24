@@ -394,10 +394,11 @@ static int32_t MRR_MSS_CLIAdvancedFrameCfg (int32_t argc, char* argv[])
  *  @retval
  *      Not Applicable.
  */
-void MRR_MSS_CLIInit (void)
+void MRR_MSS_CLIInit (uint8_t taskPriority)
 {
     CLI_Cfg     cliCfg;
-    static char* dummy[1];
+    char        demoBanner[256];
+    // static char* dummy[1];
 
     /* Initialize the CLI configuration: */
     memset ((void *)&cliCfg, 0, sizeof(CLI_Cfg));
@@ -405,7 +406,8 @@ void MRR_MSS_CLIInit (void)
     /* Populate the CLI configuration: */
     cliCfg.cliPrompt                    = "MrrTIDesign:/>";
     cliCfg.cliUartHandle                = gMrrMSSMCB.commandUartHandle;
-    cliCfg.taskPriority                 = 3;
+    cliCfg.taskPriority                 = taskPriority;
+    cliCfg.cliBanner                    = demoBanner;
     cliCfg.mmWaveHandle                 = gMrrMSSMCB.ctrlHandle;
     cliCfg.enableMMWaveExtension        = 0U;
     cliCfg.usePolledMode                = true;
@@ -426,7 +428,7 @@ void MRR_MSS_CLIInit (void)
     cliCfg.tableEntry[3].helpString     = "Stop the sensor";
     cliCfg.tableEntry[3].cmdHandlerFxn  = MRR_MSS_CLISensorStop;
 
-    #if 0
+    #if 1
     /* Open the CLI: */
     if (CLI_open (&cliCfg) < 0)
     {
@@ -439,12 +441,10 @@ void MRR_MSS_CLIInit (void)
     /* The link is not configured. */
     gMrrMSSMCB.cfgStatus = false;
     gMrrMSSMCB.runningStatus = false;
-    gMrrMSSMCB.isMMWaveOpen = false;
+    // gMrrMSSMCB.isMMWaveOpen = false;
     
-    MRR_MSS_CLIAdvancedFrameCfg(1, dummy);
-    
-    
-    MRR_MSS_CLISensorStart(2, dummy);
+    // MRR_MSS_CLIAdvancedFrameCfg(1, dummy);
+    // MRR_MSS_CLISensorStart(2, dummy);
     return;
 }
 

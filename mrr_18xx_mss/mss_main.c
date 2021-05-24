@@ -99,6 +99,20 @@ uint8_t                 rxData[64U];
 uint32_t                txDataLength, rxDataLength;
 
 /**
+ * @brief Task Priority settings:
+ * Mmwave task is at higher priority because of potential async messages from BSS
+ * that need quick action in real-time.
+ *
+ * CLI task must be at a lower priority than object detection
+ * dpm task priority because the dynamic CLI command handling in the objection detection
+ * dpm task assumes CLI task is held back during this processing. The alternative
+ * is to use a semaphore between the two tasks.
+ */
+#define MMWDEMO_CLI_TASK_PRIORITY                 3
+// #define MMWDEMO_DPC_OBJDET_DPM_TASK_PRIORITY      4
+#define MMWDEMO_MMWAVE_CTRL_TASK_PRIORITY         5
+
+/**
  * @brief
  *  Global Variable for tracking information required by the MRR TI Design
  */
@@ -203,7 +217,7 @@ static void MRR_MSS_frameStartIntCallback(uintptr_t arg)
 static int32_t MRR_MSS_eventFxn(uint16_t msgId, uint16_t sbId, uint16_t sbLen, uint8_t *payload)
 {
     uint16_t asyncSB = RL_GET_SBID_FROM_UNIQ_SBID(sbId);
-    // System_printf("%d,%d\r\n",msgId,asyncSB);
+    // System_printf("%d,%d\n",msgId,asyncSB);
     /* Process the received message: */
     switch (msgId)
     {
@@ -757,14 +771,14 @@ static void MRR_MSS_initTask (UArg arg0, UArg arg1)
      *   mmWave control API
      *****************************************************************************/
     Task_Params_init(&taskParams);
-    taskParams.priority  = 6;
+    taskParams.priority  = MMWDEMO_MMWAVE_CTRL_TASK_PRIORITY;
     taskParams.stackSize = 3*1024;
     Task_create(MRR_MSS_mmWaveCtrlTask, &taskParams, NULL);
 
     /*****************************************************************************
      * Setup the CLI
      *****************************************************************************/
-    MRR_MSS_CLIInit ();
+    MRR_MSS_CLIInit (MMWDEMO_CLI_TASK_PRIORITY);
 }
 
 /**
@@ -814,7 +828,6 @@ int32_t main (void)
 
     /* Initialize the Task Parameters. */
     Task_Params_init(&taskParams);
-    taskParams.priority = 3;
     Task_create(MRR_MSS_initTask, &taskParams, NULL);
 
     /* Start BIOS */
