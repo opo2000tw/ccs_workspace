@@ -22,6 +22,7 @@
                 "${workspaceFolder}/mrr_18xx_mss/src"
             ],
             "defines": [
+                "xdc_target_types__=ti/targets/std.h",
                 "SOC_XWR18XX",
                 "SUBSYS_MSS",
                 "_LITTLE_ENDIAN",
