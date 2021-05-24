@@ -98,8 +98,6 @@
 uint8_t                 rxData[64U];
 uint32_t                txDataLength, rxDataLength;
 
-
-
 /**
  * @brief
  *  Global Variable for tracking information required by the MRR TI Design
@@ -122,7 +120,6 @@ static void MRR_MSS_mmWaveCtrlTask (UArg arg0, UArg arg1);
 /**************************************************************************
  ********************** MSS MRR TI Design Functions ***********************
  **************************************************************************/
-
 /**
  *  @b Description
  *  @n
@@ -591,7 +588,7 @@ static void MRR_MSS_initTask (UArg arg0, UArg arg1)
 
     /* Initialize the UART */
     UART_init();
-    
+
     /* Initialize the GPIO */
     GPIO_init();
     
