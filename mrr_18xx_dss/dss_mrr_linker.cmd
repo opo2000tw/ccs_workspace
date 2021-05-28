@@ -80,7 +80,8 @@ SECTIONS
         dss_data_path.oe674(.text:MmwDemo_XYestimation)
         dss_data_path.oe674(.text:cfarCa_SO_dBwrap_withSNR)
         dss_data_path.oe674(.text:cfarCadB_SO_withSNR)
-        /*dss_data_path.oe674(.text:cfarPeakGroupingAlongDoppler)
+        /*
+        dss_data_path.oe674(.text:cfarPeakGroupingAlongDoppler)
         dss_data_path.oe674(.text:pruneToPeaks)
         dss_data_path.oe674(.text:findKLargestPeaks)
         dss_data_path.oe674(.text:disambiguateVel)
@@ -88,8 +89,10 @@ SECTIONS
         dss_data_path.oe674(.text:MmwDemo_getDopplerLine)
         */
         dss_data_path.oe674(.text:rangeBasedPruning)
-       /* dss_data_path.oe674(.text:MmwDemo_magnitudeSquared)*/
+        /*
+        dss_data_path.oe674(.text:MmwDemo_magnitudeSquared)
         dss_data_path.oe674(.text:azimuthProcessing)
+        */
         dss_data_path.oe674(.text:MmwDemo_waitEndOfChirps)
         clusteringDBscan.oe674(.text:clusteringDBscan_findNeighbors2Fixed)
         Extended_Kalman_Filter_xyz.oe674(.text:isTargetWithinDataAssociationThresh)

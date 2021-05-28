@@ -191,6 +191,7 @@ static int32_t MmwDemo_mboxWrite(MmwDemo_message *message);
  *  @retval
  *      Not Applicable.
  */
+// REVIEW
 static void MRR_DSS_chirpIntCallback(uintptr_t arg)
 {
     gMrrDSSMCB.chirpProcToken = 1;
@@ -210,6 +211,7 @@ static void MRR_DSS_chirpIntCallback(uintptr_t arg)
  *  @retval
  *      Not Applicable.
  */
+// REVIEW
 static void MRR_DSS_frameStartIntCallback(uintptr_t arg)
 {
     gMrrDSSMCB.frameStartIntToken = 1; 
@@ -521,7 +523,8 @@ static void MRR_DSS_initTask(UArg arg0, UArg arg1)
     /*****************************************************************************
      * Initialize the mmWave SDK components:
      *****************************************************************************/
-
+#if 1 
+// LINK C:\Users\opo20\qqq\mmwave_sdk_68xx_dsp_mss\mmwdemo_adcconfig.c:71
     /* Initialize the Mailbox */
     Mailbox_init (MAILBOX_TYPE_DSS);
 
@@ -547,11 +550,12 @@ static void MRR_DSS_initTask(UArg arg0, UArg arg1)
             //System_printf("Error: Unable to open the ADCBUF driver\n");
             return;
         }
-
+// LINK C:\Users\opo20\qqq/mmwave_sdk_18xx_mss/mmwdemo_adcconfig.c:114
         /* One time ADC Buffer configuration.*/
         MRR_DSS_dssDataPathConfigAdcBuf ();
     }
-
+#endif
+// REVIEW
     {
         /* Register interrupts. */
         SOC_SysIntListenerCfg listenerCfg;
